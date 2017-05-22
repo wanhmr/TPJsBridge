@@ -49,21 +49,19 @@
     [[NSURLSession sharedSession] downloadTaskWithURL:self.apiBuildFileUpdateUrl completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!error) {
             NSString *cachePathForJsBridgeCoreFile = [self cachePathForJsBridgeApiBuildFile];
-            NSError *fileError;
-            [[NSFileManager defaultManager] removeItemAtPath:cachePathForJsBridgeCoreFile error:&fileError];
+            if ([[NSFileManager defaultManager] fileExistsAtPath:cachePathForJsBridgeCoreFile]) {
+                [[NSFileManager defaultManager] removeItemAtPath:cachePathForJsBridgeCoreFile error:nil];
+            }
+            
+            NSError *fileError = nil;
+            NSURL *cacheFileUrl = [NSURL fileURLWithPath:cachePathForJsBridgeCoreFile isDirectory:NO];
+            [[NSFileManager defaultManager] moveItemAtURL:location toURL:cacheFileUrl error:&fileError];
+            
             if (!fileError) {
-                NSURL *cacheFileUrl = [NSURL fileURLWithPath:cachePathForJsBridgeCoreFile isDirectory:NO];
-                [[NSFileManager defaultManager] moveItemAtURL:location toURL:cacheFileUrl error:&fileError];
-                
-                if (!fileError) {
-                    self.apiBuildFileUpdated = YES;
-                    self.apiBuildFilePath = cachePathForJsBridgeCoreFile;
-                }else {
-                    TPJsBridgeLog(@"move file error: %@", fileError);
-                }
-                
+                self.apiBuildFileUpdated = YES;
+                self.apiBuildFilePath = cachePathForJsBridgeCoreFile;
             }else {
-                TPJsBridgeLog(@"remove file error: %@", fileError);
+                TPJsBridgeLog(@"move file error: %@", fileError);
             }
             
         }else {
@@ -118,17 +116,23 @@
 - (NSString *)cachePathForJsBridgeApiBuildFile {
     NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
     NSString *jsBridgePath = [cachePath stringByAppendingPathComponent:[self.scheme stringByAppendingString:@"_jsbridge"]];
-    NSError *fileError;
-    [[NSFileManager defaultManager] createDirectoryAtPath:jsBridgePath
-                              withIntermediateDirectories:YES
-                                               attributes:nil
-                                                    error:&fileError];
-    if (!fileError) {
-        return [jsBridgePath stringByAppendingPathComponent:kDefaultJsBridgeApiBulidFileName];
+    NSString *apiBuldFilePath = [jsBridgePath stringByAppendingPathComponent:kDefaultJsBridgeApiBulidFileName];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:jsBridgePath]) {
+        NSError *fileError;
+        [[NSFileManager defaultManager] createDirectoryAtPath:jsBridgePath
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:&fileError];
+        if (!fileError) {
+            return apiBuldFilePath;
+        }else {
+            TPJsBridgeLog(@"create directory error: %@", fileError);
+            return nil;
+        }
     }else {
-        TPJsBridgeLog(@"create directory error: %@", fileError);
-        return nil;
+        return apiBuldFilePath;
     }
+    
     
 }
 
