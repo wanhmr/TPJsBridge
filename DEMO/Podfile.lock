@@ -1,0 +1,21 @@
+PODS:
+  - TPJsBridge (0.0.5)
+
+DEPENDENCIES:
+  - TPJsBridge (from `https://github.com/wanhmr/TPJsBridge.git`)
+
+EXTERNAL SOURCES:
+  TPJsBridge:
+    :git: https://github.com/wanhmr/TPJsBridge.git
+
+CHECKOUT OPTIONS:
+  TPJsBridge:
+    :commit: e3e095aaafb348a232d7ebfe68fb239fe1568a49
+    :git: https://github.com/wanhmr/TPJsBridge.git
+
+SPEC CHECKSUMS:
+  TPJsBridge: 21304af0b289ce90d12539a5be706d0f01db7311
+
+PODFILE CHECKSUM: d839c29f64ac81dd6f7bb58e3be14ec3f7106bc9
+
+COCOAPODS: 1.0.0

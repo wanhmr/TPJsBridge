@@ -20,6 +20,3 @@ TPJsBridge 是一个插件化的 jsBridge 库，参考了 cordova，但做了简
     4.在 TPCustomJsBridgeConfig.json 中声明 Plugin <br/>
     上面步骤完成就可以使用了 <br/>
     具体请参考 TPJsPlugin_viewPageManager 实现
-
-
-![screenshot](./Screenshots/1.gif)

@@ -1,0 +1,1 @@
+../../../TPJsBridge/TPJsBridge/TPJsBridgeCore/Components/TPJsPluginResult.h
