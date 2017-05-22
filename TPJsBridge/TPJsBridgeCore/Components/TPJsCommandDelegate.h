@@ -21,4 +21,6 @@
 
 - (instancetype)initWithService:(TPJsService *)service;
 
+- (void)sendPluginResult:(TPJsPluginResult *)result callbackId:(NSString *)callbackId;
+
 @end
