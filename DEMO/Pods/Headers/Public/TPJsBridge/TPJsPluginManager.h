@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridgeCore/Components/TPJsPluginManager.h
+../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsPluginManager.h

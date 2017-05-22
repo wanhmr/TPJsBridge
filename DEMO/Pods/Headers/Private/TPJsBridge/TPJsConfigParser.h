@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridgeCore/Components/TPJsConfigParser.h
+../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsConfigParser.h

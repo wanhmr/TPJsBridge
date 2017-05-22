@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridgeCore/Utilities/NSBundle+TPJsBridge.h
+../../../../../TPJsBridge/TPJsBridgeCore/Utilities/NSBundle+TPJsBridge.h

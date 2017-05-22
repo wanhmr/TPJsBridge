@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridePluginExtensions/TPJsPlugin_device.h
+../../../../../TPJsBridge/TPJsBridePluginExtensions/TPJsPlugin_device.h

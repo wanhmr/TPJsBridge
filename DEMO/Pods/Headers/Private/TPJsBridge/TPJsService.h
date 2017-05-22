@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridgeCore/Components/TPJsService.h
+../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsService.h

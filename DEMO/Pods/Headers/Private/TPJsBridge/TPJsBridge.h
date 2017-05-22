@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridge.h
+../../../../../TPJsBridge/TPJsBridge.h

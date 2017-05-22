@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridgeCore/Components/TPJsCommandDelegate.h
+../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsCommandDelegate.h

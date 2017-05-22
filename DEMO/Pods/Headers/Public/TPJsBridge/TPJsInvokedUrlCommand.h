@@ -1,1 +1,1 @@
-../../../TPJsBridge/TPJsBridge/TPJsBridgeCore/Components/TPJsInvokedUrlCommand.h
+../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsInvokedUrlCommand.h

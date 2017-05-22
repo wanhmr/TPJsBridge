@@ -6,5 +6,5 @@ target 'TPJsBridge' do
   # use_frameworks!
 
   # Pods for TPJsBridge
-  pod 'TPJsBridge’, :git => 'https://github.com/wanhmr/TPJsBridge.git’
+  pod 'TPJsBridge’, :path => ‘../’
 end
