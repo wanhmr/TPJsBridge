@@ -8,7 +8,7 @@ TPJsBridge 是一个插件化的 jsBridge 库，参考了 cordova，但做了简
 
 ```
 Initialization code:
-NSString *configFilePath = [[NSBundle mainBundle] pathForResource:@"TPCustomJsBridgeConfig.json" ofType:nil];
+NSString *configFilePath = [[NSBundle mainBundle] pathForResource:@"TPCustomJsBridgeConfig" ofType:@"json"];
 
 NSString *apiBuildFilePath = [[NSBundle mainBundle] pathForResource:@"TPCustomJsBridgeApiBuild" ofType:@"js"];
     
