@@ -25,7 +25,7 @@
 
 
 - (void)dealloc {
-    [self unregisterNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - notification
