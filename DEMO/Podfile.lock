@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TPJsBridge:
-    :commit: e3e095aaafb348a232d7ebfe68fb239fe1568a49
+    :commit: a4f262b65b1f4b8f238778dc6d7de5b26a9e2c8b
     :git: https://github.com/wanhmr/TPJsBridge.git
 
 SPEC CHECKSUMS:
