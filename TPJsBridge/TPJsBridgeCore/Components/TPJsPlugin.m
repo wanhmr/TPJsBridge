@@ -11,26 +11,22 @@
 #import "TPJsBridgeConst.h"
 
 @interface TPJsPlugin ()
-
+@property (nonatomic, assign) BOOL isReady;
 @end
 
 @implementation TPJsPlugin
 - (instancetype)init {
     self = [super init];
     if (self) {
-        
-        
         [self didInitialize];
     }
     return self;
 }
 
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+- (void)dealloc {
+    [self unregisterNotification];
 }
-
 
 #pragma mark - notification
 - (void)registerNotification {
@@ -43,6 +39,11 @@
                                              selector:@selector(onClose:)
                                                  name:kTPJsBridgeDidCloseNotification
                                                object:self.service];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onReady:)
+                                                 name:kTPJsBridgeDidReadyNotification
+                                               object:self.service];
 }
 
 
@@ -50,6 +51,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kTPJsBridgeDidConnectNotification object:self.service];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kTPJsBridgeDidCloseNotification object:self.service];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kTPJsBridgeDidReadyNotification object:self.service];
 }
 
 - (void)setService:(TPJsService *)service {
@@ -76,7 +79,9 @@
     
 }
 
-
+- (void)onReady:(NSNotification *)notification {
+    self.isReady = YES;
+}
 
 - (id<TPJsCommandDelegate>)commandDelegate
 {

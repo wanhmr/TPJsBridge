@@ -35,6 +35,10 @@
     </p>
   <script>
       
+      document.addEventListener("TPJsBridgeDidReadyEvent", function(){
+                                    getDeviceInfo();
+                                }, false);
+      
       function getDeviceInfo() {
           custom.getDeviceInformation(function(data){
                 alert("hello:JSCall" + JSON.stringify(data));

@@ -14,6 +14,7 @@
 @interface TPJsPlugin : NSObject
 @property (nonatomic, weak) TPJsService *service;
 @property (nonatomic, readonly) id<TPJsCommandDelegate> commandDelegate;
+@property (nonatomic, readonly) BOOL isReady;
 
 - (void)didInitialize NS_REQUIRES_SUPER;
 

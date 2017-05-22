@@ -47,11 +47,11 @@ function generateJsBridge(scheme) {
     //eg. scheme.device
     function registerApi(api) {
         var t = api.split("."), n = window;
-        return t.forEach(function (e) {
-            !n[e] && (n[e] = {}),
-                n = n[e];
-        }),
-            n;
+        t.forEach(function (e) {
+            !n[e] && (n[e] = {});
+            n = n[e];
+        });
+        return n;
     }
     //存储函数，返回index
     function generateCallbackId() {
@@ -81,10 +81,13 @@ function generateJsBridge(scheme) {
         }
     }
     //native的回调函数，execGlobalCallback:
-    function execGlobalCallback(callbackId, callbackData, async) {
-        if (!callbackId)
+    function execGlobalCallback(callbackId, callbackData, deleteCallback, async) {
+        if (!callbackId) {
+            console.error("jsbridge: callbackId is empty");
             return;
-        fireCallback(callbackId, callbackData, true, async);
+        }
+        ;
+        fireCallback(callbackId, callbackData, deleteCallback, async);
     }
     //mapp.build
     function build(path, handler) {
@@ -142,8 +145,13 @@ function generateJsBridge(scheme) {
         var url;
         var callbackId;
         if (callback) {
-            callbackId = generateCallbackId();
-            callbacks[callbackId] = callback;
+            if (typeof callback === "function") {
+                callbackId = generateCallbackId();
+                callbacks[callbackId] = callback;
+            }
+            else {
+                console.log("jsbridge: callback is not a function");
+            }
         }
         var api = scheme + "." + className + "." + methodName;
         var provideApi = scheme + "." + methodName;
@@ -162,12 +170,18 @@ function generateJsBridge(scheme) {
             console.error("jsbride: the version didn't support path:" + className + "." + methodName);
         }
     }
-    //当本地jsbridge初始化完成，调用此方法告诉前端jsbridge已经初始化完毕
     function execPatchEvent(type) {
         var ev = document.createEvent('Event');
         ev.initEvent(type, true, true);
         document.dispatchEvent(ev);
     }
+    // function ready(callback: () => void) {
+    //     if (callback && typeof callback === "function") {
+    //         callbacks["_READY_CALLBACK_"] = callback;
+    //     }else {
+    //         console.error("jsbridge: ready callback is empty or not a function");
+    //     }
+    // }
     var userAgent = navigator.userAgent, //判断浏览器类型
     iOSPlatformRegx = /(iPad|iPhone|iPod).*? (\w+)\/([\d\.]+)/, //ios浏览器标志
     androidPlatformRegx = /(Android).*? (\w+)\/([\d\.]+)/, //android浏览器标志
@@ -188,7 +202,6 @@ function generateJsBridge(scheme) {
             this.platform = platform;
             this.version = "1";
             this.appVersion = "1";
-            this.fireCallback = fireCallback;
             this.build = build;
             this.invoke = invoke;
             this.execGlobalCallback = execGlobalCallback;
@@ -211,5 +224,5 @@ var JsBridgeInfo = (function () {
 var jsBridgeInfo = new JsBridgeInfo();
 (function (scheme, jsBridge) {
     this[scheme] = jsBridge(scheme),
-        typeof define == "function" ? define(this[scheme]) : typeof module == "object" && (module.exports = this[scheme]);
+        typeof define === "function" ? define(this[scheme]) : typeof module === "object" && (module.exports = this[scheme]);
 })(jsBridgeInfo.scheme, generateJsBridge);

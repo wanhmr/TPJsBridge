@@ -212,8 +212,13 @@
  @param navigation The navigation.
  */
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-    
-    [self evaluateJavaScript:[self.jsBridgeCodeProvider jsBridgeCode] completionHandler:nil];
+    __weak __typeof(self) weak_self = self;
+    [self evaluateJavaScript:[self.jsBridgeCodeProvider jsBridgeCode] completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        __strong __typeof(weak_self) strong_self = weak_self;
+        [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidReadyNotification object:strong_self];
+        NSString *readyJs = [NSString stringWithFormat:@"%@.execPatchEvent('%@');", self.scheme, kTPJsBridgeDidReadyEvent];
+        [strong_self evaluateJavaScript:readyJs completionHandler:nil];
+    }];
     
     if ([self.originNavigationDelegate respondsToSelector:@selector(webView:didFinishNavigation:)]) {
         [self.originNavigationDelegate webView:webView didFinishNavigation:navigation];
