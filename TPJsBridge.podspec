@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TPJsBridge"
-  s.version      = "0.0.4"
-  s.summary      = "An iOS/OSX bridge for sending messages between Obj-C and JavaScript in WKWebView."
+  s.version      = "0.0.5"
+  s.summary      = "An iOS bridge for sending messages between Obj-C and JavaScript in WKWebView."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   s.source_files  = "TPJsBridge/**/*.{h,m}"
   # s.exclude_files = "TPJsBridge/Exclude"
 
-  s.public_header_files = "TPJsBridge/**/*.{h,m}"
+  s.public_header_files = "TPJsBridge/**/*.{h}"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -102,7 +102,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resource  = "TPJsBridge.bundle"
+  s.resource  = "TPJsBridge/TPJsBridge.bundle"
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
