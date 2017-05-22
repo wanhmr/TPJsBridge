@@ -72,13 +72,17 @@
 - (void)close {
     if (!self.webView) return;
     
+    [self unregisterKVO];
+    
     self.webView.navigationDelegate = self.originNavigationDelegate;
     self.originNavigationDelegate = nil;
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidCloseNotification object:self];
     
-    [self unregister];
 }
 
+
+#pragma mark - KVO
 - (void)registerKVO {
     if (!self.webView) return;
     [self.webView addObserver:self
@@ -88,7 +92,7 @@
 }
 
 
-- (void)unregister {
+- (void)unregisterKVO {
     if (!self.webView) return;
     [self.webView removeObserver:self forKeyPath:@"navigationDelegate"];
 }
