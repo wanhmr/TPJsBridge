@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   s.exclude_files = "TPJsBridge/Exclude"
 
   s.public_header_files = "TPJsBridge/TPJsBridge.h"
-
+  s.platform      = { :ios => "8.0", :osx => "" }
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = "WebKit"
-  s.ios.frameworks   = 'UIKit', 'WebKit'
+
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 

@@ -6,7 +6,6 @@
 //  Copyright © 2017年 Tpphha. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 @class TPJsPluginManager;
 @class TPJsCommandDelegateImpl;
