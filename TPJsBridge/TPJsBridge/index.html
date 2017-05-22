@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile JS API Demo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <style type="text/css" media="screen">
+      button.btn{
+          margin: 5px;
+      }
+  </style>
+</head>
+<body>
+    <h1 style="text-align:center">Mobile JS API Demo</h1>
+    <p>
+    TPJsBridge 是一个插件化的 jsBridge 库，参考了 cordova, 但做了简化，能够实现复杂的 native 与 wap 的交互
+    </br>
+    </br>
+    功能列表:
+    <ol>
+        <li>获取设备信息:<button class="btn btn-primary" onclick="getDeviceInfo()">getDeviceInfo</button></li>
+        <li>打开网页带动画:<button class="btn btn-primary" onclick="openViewPage(1)">openViewPage</button></li>
+        <li>打开网页无动画:<button class="btn btn-primary" onclick="openViewPage(0)">openViewPage</button></li>
+    </ol>
+    
+    
+    
+    自定义 Plugin 流程：<br/>
+    1.继承 TPJsPlugin <br/>
+    2.实现功能 <br/>
+    3.在 TPCustomJsBridgeApiBuild.js 文件中创建接口 <br/>
+    4.在 TPCustomJsBridgeConfig.json 中声明 Plugin <br/>
+    上面步骤完成就可以使用了 <br/>
+    具体请参考 TPJsPlugin_viewPageManager 实现
+    </p>
+  <script>
+      
+      function getDeviceInfo() {
+          custom.getDeviceInformation(function(data){
+                alert("hello:JSCall" + JSON.stringify(data));
+          });
+      }
+  
+      function openViewPage(animated) {
+          var data = {url: "https://www.baidu.com",
+              title: "标题",
+              animated: 0
+          };
+          data.animated = animated;
+          custom.openViewPage(data,
+                               function(data){
+                                    alert("hello:JSCall" + JSON.stringify(data));
+                               });
+      }
+
+  </script>
+</body>
+</html>

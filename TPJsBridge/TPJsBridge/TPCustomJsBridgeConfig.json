@@ -1,0 +1,23 @@
+{
+    "scheme": "custom",
+    "apiBuildFileUpdateUrl": "",
+    "plugins": [
+                {
+                    "pluginname": "device",
+                    "pluginclass": "TPJsPlugin_device",
+                    "exports": {
+                        "getDeviceInformation": "getDeviceInfo"
+                    }
+                },
+                
+                {
+                    "pluginname": "viewPageManager",
+                    "pluginclass": "TPJsPlugin_viewPageManager",
+                "exports": {
+                
+                    }
+                }
+                
+    ]
+    
+}

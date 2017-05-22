@@ -1,0 +1,16 @@
+{
+    "scheme": "jsbridge",
+    "apiBuildFileUpdateUrl": "",
+    "plugins": [
+                
+                {
+                    "pluginname": "device",
+                    "pluginclass": "TPJsPlugin_device",
+                    "exports": {
+                        "getDeviceInfo": "getDeviceInfo"
+                    }
+                }
+                
+    ]
+    
+}
