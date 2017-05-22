@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Tpphha. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "TPJsCommandDelegate.h"
 #import "TPJsInvokedUrlCommand.h"
 #import "TPJsPluginResult.h"

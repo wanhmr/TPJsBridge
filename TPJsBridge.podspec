@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TPJsBridge"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "An iOS/OSX bridge for sending messages between Obj-C and JavaScript in WKWebView."
 
   # This description is used to generate tags and improve search results.
@@ -87,12 +87,12 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
+  #
 
-  s.source_files  = "TPJsBridge", "TPJsBridge/**/*.{h,m}"
-  s.exclude_files = "TPJsBridge/Exclude"
+  s.source_files  = "TPJsBridge/**/*.{h,m}"
+  # s.exclude_files = "TPJsBridge/Exclude"
 
-  s.public_header_files = "TPJsBridge/TPJsBridge.h"
-  s.platform      = { :ios => "8.0", :osx => "" }
+  s.public_header_files = "TPJsBridge/**/*.{h,m}"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -102,7 +102,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # s.resource  = "icon.png"
+  s.resource  = "TPJsBridge.bundle"
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -127,7 +127,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
