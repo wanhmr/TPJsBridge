@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) TPJsPluginManager *pluginManager;
 @property (nonatomic, readonly) TPJsCommandDelegateImpl *commandDelegate;
 @property (nonatomic, readonly) NSString *scheme;
+@property (nonatomic, readonly) BOOL isReady;
 
 - (instancetype)initWithConfigFilePath:(NSString * _Nullable)configFilePath apiBuildFilePath:(NSString * _Nullable)apiBuildFilePath;
 

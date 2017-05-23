@@ -11,10 +11,12 @@
 #import "TPJsBridgeConst.h"
 
 @interface TPJsPlugin ()
-@property (nonatomic, assign) BOOL isReady;
+
 @end
 
 @implementation TPJsPlugin
+@dynamic isReady;
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -40,10 +42,6 @@
                                                  name:kTPJsBridgeDidCloseNotification
                                                object:self.service];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(onReady:)
-                                                 name:kTPJsBridgeDidReadyNotification
-                                               object:self.service];
 }
 
 
@@ -56,9 +54,7 @@
 }
 
 - (void)setService:(TPJsService *)service {
-    if (_service != service) {
-        [self unregisterNotification];
-    }
+    [self unregisterNotification];
     
     _service = service;
     
@@ -79,18 +75,14 @@
     
 }
 
-- (void)onReady:(NSNotification *)notification {
-    self.isReady = YES;
+
+- (id<TPJsCommandDelegate>)commandDelegate {
+    return self.service.commandDelegate;
 }
 
-- (id<TPJsCommandDelegate>)commandDelegate
-{
-    if (self.service) {
-        return self.service.commandDelegate;
-    } else {
-        NSAssert(NO, @"the bridge Service is not connected");
-        return nil;
-    }
+
+- (BOOL)isReady {
+    return self.service.isReady;
 }
 
 @end

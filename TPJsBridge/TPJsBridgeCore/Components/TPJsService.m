@@ -217,7 +217,9 @@
         __strong __typeof(weak_self) strong_self = weak_self;
         [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidReadyNotification object:strong_self];
         NSString *readyJs = [NSString stringWithFormat:@"%@.execPatchEvent('%@');", self.scheme, kTPJsBridgeDidReadyEvent];
-        [strong_self evaluateJavaScript:readyJs completionHandler:nil];
+        [strong_self evaluateJavaScript:readyJs completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+            strong_self->_isReady = YES;
+        }];
     }];
     
     if ([self.originNavigationDelegate respondsToSelector:@selector(webView:didFinishNavigation:)]) {
