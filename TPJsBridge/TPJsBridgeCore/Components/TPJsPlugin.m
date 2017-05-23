@@ -15,7 +15,7 @@
 @end
 
 @implementation TPJsPlugin
-@dynamic isReady;
+@dynamic isReady, commandDelegate;
 
 - (instancetype)init {
     self = [super init];
