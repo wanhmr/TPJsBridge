@@ -15,11 +15,11 @@ function jsBridgeGenerateApiString(firstComponent) {
 
 
 jsBridge.build(jsBridgeGenerateApiString("getDeviceInformation"), {
-               iOS: function (e) {
-                    jsBridge.invoke("device", "getDeviceInformation", null, e);
+               iOS: function (o) {
+                    jsBridge.invoke("device", "getDeviceInformation", o);
                },
-               android: function (e) {
-                    jsBridge.invoke("device", "getDeviceInformation", e);
+               android: function (o) {
+                    jsBridge.invoke("device", "getDeviceInformation", o);
                },
                support: {
                     iOSPlatformVersion: "1.0",
@@ -29,11 +29,11 @@ jsBridge.build(jsBridgeGenerateApiString("getDeviceInformation"), {
 
 
 jsBridge.build(jsBridgeGenerateApiString("openViewPage"), {
-               iOS: function (data, e) {
-                    jsBridge.invoke("viewPageManager", "openViewPage", data, e);
+               iOS: function (o) {
+                    jsBridge.invoke("viewPageManager", "openViewPage", o);
                },
-               android: function (data, e) {
-                    jsBridge.invoke("viewPageManager", "openViewPage", data, e);
+               android: function (o) {
+                    jsBridge.invoke("viewPageManager", "openViewPage",  o);
                },
                support: {
                     iOSPlatformVersion: "1.0",

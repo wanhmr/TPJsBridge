@@ -14,16 +14,21 @@
 #import "TPJsBridgeCodeProvider.h"
 #import "TPJsBridgeConst.h"
 #import "TPJsConfigParser.h"
+#import "TPJsBridgeMacro.h"
 
-@interface TPJsService ()
+static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
+
+@interface TPJsService () <WKScriptMessageHandler>
 @property (nonatomic, strong) TPJsPluginManager *pluginManager;
 @property (nonatomic, strong) TPJsCommandDelegateImpl *commandDelegate;
 @property (nonatomic, strong) TPJsCommandQueue *commandQueue;
 @property (nonatomic, strong) TPJsBridgeCodeProvider *jsBridgeCodeProvider;
 @property (nonatomic, weak) id<WKNavigationDelegate> originNavigationDelegate;
+@property (nonatomic, copy) NSString *jsBridgeDidReadyEventName;
 @end
 
 @implementation TPJsService
+@dynamic isReady, scheme;
 
 - (instancetype)init {
     NSAssert(NO, @"Bridge Service must init with plugin config file");
@@ -35,7 +40,7 @@
     self = [super init];
     if (self) {
         TPJsConfigParser *configParser = [[TPJsConfigParser alloc] initWithConfigFilePath:configFilePath];
-        
+        self.jsBridgeDidReadyEventName = configParser.jsBridgeDidReadyEventName;
         self.pluginManager = [[TPJsPluginManager alloc] initWithService:self plugins:configParser.plugins];
         self.commandDelegate = [[TPJsCommandDelegateImpl alloc] initWithService:self];
         self.commandQueue = [[TPJsCommandQueue alloc] initWithService:self];
@@ -44,9 +49,8 @@
     return self;
 }
 
-
 - (void)dealloc {
-    [self close];
+    TPJsBridgeLog(@"TPJsService dealloced.");
 }
 
 + (instancetype)service {
@@ -61,31 +65,86 @@
         [self close];
     }
     
+    _status = TPJsServiceStatusConnecting;
+    
     self.webView = webView;
     self.originNavigationDelegate = self.webView.navigationDelegate;
     self.webView.navigationDelegate = self;
     [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidConnectNotification object:self];
     
     [self registerKVO];
+    [self addScriptMessageHandler];
+    
 }
 
 - (void)close {
-    if (!self.webView) return;
+    WKWebView *webView = self.webView;
+    if (!webView || _status == TPJsServiceStatusClosed) return;
+    
+    _status = TPJsServiceStatusClosed;
     
     [self unregisterKVO];
+    [self removeScriptMessageHandler];
     
-    self.webView.navigationDelegate = self.originNavigationDelegate;
+    webView.navigationDelegate = self.originNavigationDelegate;
     self.originNavigationDelegate = nil;
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidCloseNotification object:self];
     
+    self.webView = nil;
+    
 }
 
 
+- (void)addScriptMessageHandler {
+    WKWebView *webView = self.webView;
+    WKWebViewConfiguration *configuration = webView.configuration;
+    if (configuration == nil) {
+        configuration = [WKWebViewConfiguration new];
+    }
+    WKUserContentController *userContentController = configuration.userContentController;
+    if (userContentController == nil) {
+        userContentController = [WKUserContentController new];
+    }
+    
+    
+    [userContentController addScriptMessageHandler:self name:kTPJsBridgeScriptMessageHandlerName];
+}
+
+- (void)removeScriptMessageHandler {
+    WKWebView *webView = self.webView;
+    WKUserContentController *userContentController = webView.configuration.userContentController;
+    @try {
+        [userContentController removeScriptMessageHandlerForName:kTPJsBridgeScriptMessageHandlerName];
+    } @catch (NSException *exception) {} @finally {}
+}
+
+
+#pragma mark - WKScriptMessageHandler
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    if (!message.body) {
+        return;
+    }
+    
+    if ([message.name isEqualToString:kTPJsBridgeScriptMessageHandlerName]) {
+        NSString *urlString = message.body;
+        if (urlString.length == 0) {
+            return;
+        }
+        NSURL *url = [NSURL URLWithString:urlString];
+        TPJsInvokedUrlCommand *command = [TPJsInvokedUrlCommand commandWithUrl:url];
+        if (command) {
+            [self.commandQueue excuteCommand:command];
+        }
+    }
+    
+}
+
 #pragma mark - KVO
 - (void)registerKVO {
-    if (!self.webView) return;
-    [self.webView addObserver:self
+    WKWebView *webView = self.webView;
+    if (!webView) return;
+    [webView addObserver:self
                forKeyPath:@"navigationDelegate"
                   options:NSKeyValueObservingOptionNew
                   context:nil];
@@ -93,8 +152,9 @@
 
 
 - (void)unregisterKVO {
-    if (!self.webView) return;
-    [self.webView removeObserver:self forKeyPath:@"navigationDelegate"];
+    WKWebView *webView = self.webView;
+    if (!webView) return;
+    [webView removeObserver:self forKeyPath:@"navigationDelegate"];
 }
 
 
@@ -111,14 +171,29 @@
     }
 }
 
+#pragma mark - ready event
+- (void)noticeReadyEvent {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidReadyNotification object:self];
+    NSString *readyJs = [NSString stringWithFormat:@"%@.execPatchEvent('%@');", self.scheme, self.jsBridgeDidReadyEventName];
+    __weak __typeof(self) weak_self = self;
+    [self evaluateJavaScript:readyJs completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        __strong __typeof(weak_self) strong_self = weak_self;
+        strong_self->_status = TPJsServiceStatusOpened;
+    }];
+}
+
 #pragma mark - eval js
 - (void)evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^)(id _Nullable, NSError * _Nullable))completionHandler {
     [self.webView evaluateJavaScript:javaScriptString completionHandler:completionHandler];
 }
 
-#pragma mark - scheme
+#pragma mark - getter
 - (NSString *)scheme {
     return self.jsBridgeCodeProvider.scheme;
+}
+
+- (BOOL)isReady {
+    return self.status == TPJsServiceStatusOpened;
 }
 
 #pragma mark - WKNavigationDelegate
@@ -132,18 +207,10 @@
  @discussion If you do not implement this method, the web view will load the request or, if appropriate, forward it to another application.
  */
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
-    NSURL *url = navigationAction.request.URL;
-    if ([url.scheme isEqualToString:self.scheme]) {
-        decisionHandler(WKNavigationActionPolicyCancel);
-        TPJsInvokedUrlCommand *command = [TPJsInvokedUrlCommand commandWithUrl:url];
-        [self.commandQueue excuteCommand:command];
+    if ([self.originNavigationDelegate respondsToSelector:@selector(webView:decidePolicyForNavigationAction:decisionHandler:)]) {
+        [self.originNavigationDelegate webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
     }else {
-        if ([self.originNavigationDelegate respondsToSelector:@selector(webView:decidePolicyForNavigationAction:decisionHandler:)]) {
-            [self.originNavigationDelegate webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
-        }else {
-            decisionHandler(WKNavigationActionPolicyAllow);
-        }
+        decisionHandler(WKNavigationActionPolicyAllow);
     }
 }
 
@@ -215,11 +282,7 @@
     __weak __typeof(self) weak_self = self;
     [self evaluateJavaScript:[self.jsBridgeCodeProvider jsBridgeCode] completionHandler:^(id _Nullable data, NSError * _Nullable error) {
         __strong __typeof(weak_self) strong_self = weak_self;
-        [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidReadyNotification object:strong_self];
-        NSString *readyJs = [NSString stringWithFormat:@"%@.execPatchEvent('%@');", self.scheme, kTPJsBridgeDidReadyEvent];
-        [strong_self evaluateJavaScript:readyJs completionHandler:^(id _Nullable data, NSError * _Nullable error) {
-            strong_self->_isReady = YES;
-        }];
+        [strong_self noticeReadyEvent];
     }];
     
     if ([self.originNavigationDelegate respondsToSelector:@selector(webView:didFinishNavigation:)]) {

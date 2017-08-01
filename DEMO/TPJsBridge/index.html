@@ -40,21 +40,22 @@
                                 }, false);
       
       function getDeviceInfo() {
-          custom.getDeviceInformation(function(data){
-                alert("hello:JSCall" + JSON.stringify(data));
+          custom.getDeviceInformation({
+                                      success: function (res) {
+                                        alert("hello:JSCall" + JSON.stringify(res));
+                                      }
           });
       }
   
       function openViewPage(animated) {
-          var data = {url: "https://www.baidu.com",
-              title: "标题",
-              animated: 0
-          };
-          data.animated = animated;
-          custom.openViewPage(data,
-                               function(data){
-                                    alert("hello:JSCall" + JSON.stringify(data));
-                               });
+          custom.openViewPage({
+                              url: "https://www.baidu.com",
+                              title: "标题",
+                              animated: animated,
+                              success: function (res) {
+                                alert("hello:JSCall" + JSON.stringify(res));
+                              }
+          });
       }
 
   </script>

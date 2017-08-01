@@ -70,6 +70,10 @@
     
 }
 
+- (void)dealloc {
+    [self.service close];
+}
+
 
 @end
 
@@ -81,7 +85,7 @@
     UIViewController *topViewCtrl = [[UIApplication sharedApplication] topViewController];
     TPJsWebViewController *webViewCtrl = [[TPJsWebViewController alloc] initWithURL:[NSURL URLWithString:url]];
     webViewCtrl.title = title;
-    TPJsPluginResult *result = [TPJsPluginResult resultWithStatus:TPJsCommandResultStatus_OK message:nil];
+    TPJsPluginResult *result = [TPJsPluginResult resultWithStatus:TPJsCommandResultStatus_OK message:command.data];
     if (topViewCtrl.navigationController) {
         [topViewCtrl.navigationController pushViewController:webViewCtrl animated:animated.boolValue];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

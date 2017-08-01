@@ -8,14 +8,12 @@
 
 #import "TPJsConfigParser.h"
 #import "NSBundle+TPJsBridge.h"
+#import "TPJsBridgeConst.h"
 
-#define kDefaultConfigFileName @"TPJsBridgeConfig.json"
+static NSString* const kTPJsConfigDefaultConfigFileName = @"TPJsBridgeConfig.json";
 
 @interface TPJsConfigParser ()
 @property (nonatomic, copy) NSString *configFilePath;
-@property (nonatomic, copy) NSString *scheme;
-@property (nonatomic, copy) NSArray<NSDictionary *> *plugins;
-@property (nonatomic, copy) NSString *apiBuildUpdateUrl;
 @end
 
 @implementation TPJsConfigParser
@@ -29,14 +27,28 @@
 }
 
 - (void)parseConfigFile {
-    if (!self.configFilePath || self.configFilePath.length == 0) {
-        self.configFilePath = [[NSBundle tp_jsBridgeBundle] pathForResource:kDefaultConfigFileName
-                                                                     ofType:nil];
+    if (self.configFilePath.length == 0) {
+        self.configFilePath =
+        [[NSBundle tp_jsBridgeBundle] pathForResource:kTPJsConfigDefaultConfigFileName
+                                               ofType:nil];
     }
-    NSDictionary *config = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:self.configFilePath] options:NSJSONReadingMutableContainers error:nil];
-    self.scheme = config[@"scheme"];
-    self.plugins = config[@"plugins"];
-    self.apiBuildUpdateUrl = config[@"apiBuildFileUpdateUrl"];
+    NSDictionary *config =
+    [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:self.configFilePath]
+                                                           options:NSJSONReadingMutableContainers
+                                                             error:nil];
+    _scheme = config[kTPJsBridgeSchemeKey];
+    _jsBridgeDidReadyEventName = config[kTPJsBridgeDidReadyEventNameKey];
+    _plugins = config[kTPJsBridgePluginsKey];
+    _apiBuildUpdateUrl = config[kTPJsBridgeApiBuildFileUpdateUrlKey];
+    
+    if (_scheme.length == 0) {
+        _scheme = @"TPJsBridge";
+    }
+    
+    if (_jsBridgeDidReadyEventName.length == 0) {
+        _jsBridgeDidReadyEventName = @"TPJsBridgeDidReadyEvent";
+    }
+    
 }
 
 @end

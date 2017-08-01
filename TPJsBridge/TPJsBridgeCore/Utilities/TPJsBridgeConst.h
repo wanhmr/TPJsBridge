@@ -11,7 +11,7 @@
 #ifndef TPJsBridgeConst_h
 #define TPJsBridgeConst_h
 
-FOUNDATION_EXTERN NSString* const KTPJsBridgeSchemeToken;
+FOUNDATION_EXTERN NSString* const kTPJsBridgeSchemeToken;
 
 FOUNDATION_EXTERN NSString* const kTPJsBridgeDidConnectNotification;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeDidCloseNotification;
@@ -20,6 +20,11 @@ FOUNDATION_EXTERN NSString* const kTPJsBridgeDidReadyNotification;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeResultStatusKey;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeResultMessageKey;
 
-FOUNDATION_EXTERN NSString* const kTPJsBridgeDidReadyEvent;
+#pragma mark - key
+FOUNDATION_EXTERN NSString* const kTPJsBridgeDidReadyEventNameKey;
+FOUNDATION_EXTERN NSString* const kTPJsBridgePluginsKey;
+FOUNDATION_EXTERN NSString* const kTPJsBridgeApiBuildFileUpdateUrlKey;
+FOUNDATION_EXTERN NSString* const kTPJsBridgeSchemeKey;
+
 
 #endif /* TPJsBridgeConst_h */

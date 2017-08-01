@@ -31,6 +31,9 @@
 
 
 + (instancetype)commandWithUrl:(NSURL *)url {
+    if (!url) {
+        return nil;
+    }
     NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
     NSString *callbackId = components.fragment;
     NSString *pluginName = components.host;

@@ -16,7 +16,7 @@ function jsBridgeGenerateApiString(firstComponent) {
 
 jsBridge.build(jsBridgeGenerateApiString("getDeviceInfo"), {
                iOS: function (e) {
-                    jsBridge.invoke("device", "getDeviceInfo", null, e);
+                    jsBridge.invoke("device", "getDeviceInfo", e);
                },
                android: function (e) {
                     jsBridge.invoke("device", "getDeviceInfo", e);

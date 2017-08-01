@@ -10,6 +10,12 @@
 @class TPJsPluginManager;
 @class TPJsCommandDelegateImpl;
 
+typedef NS_ENUM(NSInteger, TPJsServiceStatus) {
+    TPJsServiceStatusClosed,
+    TPJsServiceStatusConnecting,
+    TPJsServiceStatusOpened // isReady
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TPJsService : NSObject <WKNavigationDelegate>
@@ -17,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) TPJsPluginManager *pluginManager;
 @property (nonatomic, readonly) TPJsCommandDelegateImpl *commandDelegate;
 @property (nonatomic, readonly) NSString *scheme;
+@property (nonatomic, readonly) NSString *jsBridgeDidReadyEventName;
+@property (nonatomic, readonly) TPJsServiceStatus status;
 @property (nonatomic, readonly) BOOL isReady;
 
 - (instancetype)initWithConfigFilePath:(NSString * _Nullable)configFilePath apiBuildFilePath:(NSString * _Nullable)apiBuildFilePath;

@@ -12,8 +12,8 @@
 #import "TPJsService.h"
 #import "TPJsBridgeConst.h"
 
-#define kDefaultJsBridgeCoreFileName @"TPJsBridge.js"
-#define kDefaultJsBridgeApiBulidFileName @"TPJsBridgeApiBuild.js"
+static NSString* const kDefaultJsBridgeCoreFileName = @"TPJsBridge.js";
+static NSString* const kDefaultJsBridgeApiBulidFileName = @"TPJsBridgeApiBuild.js";
 
 @interface TPJsBridgeCodeProvider ()
 @property (nonatomic, copy) NSString *jsBridgeCoreCode;
@@ -30,7 +30,6 @@
     self = [super init];
     if (self) {
         self.scheme = scheme;
-        self.apiBuildFilePath = apiBuildFilePath;
         if (apiBuildFilePath && apiBuildFilePath.length != 0) {
             self.apiBuildFilePath = apiBuildFilePath;
         }else {
@@ -93,7 +92,7 @@
     if (!_jsBridgeCoreCode) {
         NSString *path = [[NSBundle tp_jsBridgeBundle] pathForResource:kDefaultJsBridgeCoreFileName ofType:nil];
         _jsBridgeCoreCode = [NSString stringWithContentsOfURL:[NSURL fileURLWithPath:path] encoding:NSUTF8StringEncoding error:nil];
-        _jsBridgeCoreCode = [_jsBridgeCoreCode stringByReplacingOccurrencesOfString:KTPJsBridgeSchemeToken withString:self.scheme];
+        _jsBridgeCoreCode = [_jsBridgeCoreCode stringByReplacingOccurrencesOfString:kTPJsBridgeSchemeToken withString:self.scheme];
     }
     return _jsBridgeCoreCode;
 }

@@ -9,7 +9,7 @@
 #import "TPJsBridgeConst.h"
 
 #pragma mark - scheme
-NSString* const KTPJsBridgeSchemeToken = @"#scheme#";
+NSString* const kTPJsBridgeSchemeToken = @"#scheme#";
 
 #pragma mark - notification
 NSString* const kTPJsBridgeDidConnectNotification = @"kTPJsBridgeDidConnectNotification";
@@ -20,5 +20,8 @@ NSString* const kTPJsBridgeDidReadyNotification = @"kTPJsBridgeDidReadyNotificat
 NSString* const kTPJsBridgeResultStatusKey = @"status";
 NSString* const kTPJsBridgeResultMessageKey = @"message";
 
-#pragma mark - event
-NSString* const kTPJsBridgeDidReadyEvent = @"TPJsBridgeDidReadyEvent";
+#pragma mark - mark - key
+NSString* const kTPJsBridgeSchemeKey = @"scheme";
+NSString* const kTPJsBridgeDidReadyEventNameKey = @"jsBridgeDidReadyEventName";
+NSString* const kTPJsBridgePluginsKey = @"plugins";
+NSString* const kTPJsBridgeApiBuildFileUpdateUrlKey = @"apiBuildFileUpdateUrl";

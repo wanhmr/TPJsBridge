@@ -45,6 +45,10 @@
     [self.navigationController pushViewController:[[self class] new] animated:YES];
 }
 
+- (void)dealloc {
+    [self.service close];
+}
+
 #pragma mark - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     NSLog(@"%s: %@", __FUNCTION__, webView.URL);
