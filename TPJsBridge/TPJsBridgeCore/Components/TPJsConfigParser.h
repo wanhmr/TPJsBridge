@@ -10,7 +10,6 @@
 
 @interface TPJsConfigParser : NSObject
 @property (nonatomic, readonly) NSString *scheme;
-@property (nonatomic, readonly) NSString *jsBridgeDidReadyEventName;
 @property (nonatomic, readonly) NSArray<NSDictionary *> *plugins;
 @property (nonatomic, readonly) NSString *apiBuildUpdateUrl;
 

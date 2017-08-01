@@ -24,7 +24,6 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
 @property (nonatomic, strong) TPJsCommandQueue *commandQueue;
 @property (nonatomic, strong) TPJsBridgeCodeProvider *jsBridgeCodeProvider;
 @property (nonatomic, weak) id<WKNavigationDelegate> originNavigationDelegate;
-@property (nonatomic, copy) NSString *jsBridgeDidReadyEventName;
 @end
 
 @implementation TPJsService
@@ -40,7 +39,6 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
     self = [super init];
     if (self) {
         TPJsConfigParser *configParser = [[TPJsConfigParser alloc] initWithConfigFilePath:configFilePath];
-        self.jsBridgeDidReadyEventName = configParser.jsBridgeDidReadyEventName;
         self.pluginManager = [[TPJsPluginManager alloc] initWithService:self plugins:configParser.plugins];
         self.commandDelegate = [[TPJsCommandDelegateImpl alloc] initWithService:self];
         self.commandQueue = [[TPJsCommandQueue alloc] initWithService:self];
@@ -107,6 +105,11 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
         userContentController = [WKUserContentController new];
     }
     
+    NSString *jsBridge = [self.jsBridgeCodeProvider jsBridgeCode];
+    NSString *readyJs = [NSString stringWithFormat:@"%@.execReady();", self.scheme];
+    WKUserScript *script = [[WKUserScript alloc] initWithSource:[jsBridge stringByAppendingString:readyJs] injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:YES];
+    
+    [userContentController addUserScript:script];
     
     [userContentController addScriptMessageHandler:self name:kTPJsBridgeScriptMessageHandlerName];
 }
@@ -172,14 +175,8 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
 }
 
 #pragma mark - ready event
-- (void)noticeReadyEvent {
+- (void)noticeReady {
     [[NSNotificationCenter defaultCenter] postNotificationName:kTPJsBridgeDidReadyNotification object:self];
-    NSString *readyJs = [NSString stringWithFormat:@"%@.execPatchEvent('%@');", self.scheme, self.jsBridgeDidReadyEventName];
-    __weak __typeof(self) weak_self = self;
-    [self evaluateJavaScript:readyJs completionHandler:^(id _Nullable data, NSError * _Nullable error) {
-        __strong __typeof(weak_self) strong_self = weak_self;
-        strong_self->_status = TPJsServiceStatusOpened;
-    }];
 }
 
 #pragma mark - eval js
@@ -269,6 +266,7 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
  @param navigation The navigation.
  */
 - (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation {
+    
     if ([self.originNavigationDelegate respondsToSelector:@selector(webView:didCommitNavigation:)]) {
         [self.originNavigationDelegate webView:webView didCommitNavigation:navigation];
     }
@@ -279,12 +277,6 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
  @param navigation The navigation.
  */
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-    __weak __typeof(self) weak_self = self;
-    [self evaluateJavaScript:[self.jsBridgeCodeProvider jsBridgeCode] completionHandler:^(id _Nullable data, NSError * _Nullable error) {
-        __strong __typeof(weak_self) strong_self = weak_self;
-        [strong_self noticeReadyEvent];
-    }];
-    
     if ([self.originNavigationDelegate respondsToSelector:@selector(webView:didFinishNavigation:)]) {
         [self.originNavigationDelegate webView:webView didFinishNavigation:navigation];
     }

@@ -37,16 +37,11 @@ static NSString* const kTPJsConfigDefaultConfigFileName = @"TPJsBridgeConfig.jso
                                                            options:NSJSONReadingMutableContainers
                                                              error:nil];
     _scheme = config[kTPJsBridgeSchemeKey];
-    _jsBridgeDidReadyEventName = config[kTPJsBridgeDidReadyEventNameKey];
     _plugins = config[kTPJsBridgePluginsKey];
     _apiBuildUpdateUrl = config[kTPJsBridgeApiBuildFileUpdateUrlKey];
     
     if (_scheme.length == 0) {
         _scheme = @"TPJsBridge";
-    }
-    
-    if (_jsBridgeDidReadyEventName.length == 0) {
-        _jsBridgeDidReadyEventName = @"TPJsBridgeDidReadyEvent";
     }
     
 }

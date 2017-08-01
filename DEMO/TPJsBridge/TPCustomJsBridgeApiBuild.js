@@ -40,3 +40,4 @@ jsBridge.build(jsBridgeGenerateApiString("openViewPage"), {
                     androidPlatformVersion: "1.0"
                }
 });
+

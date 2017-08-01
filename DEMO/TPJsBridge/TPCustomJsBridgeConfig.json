@@ -1,6 +1,5 @@
 {
     "scheme": "custom",
-    "jsBridgeDidReadyEventName": "TPJsBridgeDidReadyEvent",
     "apiBuildFileUpdateUrl": "",
     "plugins": [
                 {

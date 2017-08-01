@@ -56,8 +56,8 @@ function generateJsBridge(scheme) {
     }
     //存储函数，返回index
     function generateCallbackId() {
-        var newIndex = index++;
-        var callbackId = "_CALLBACK_" + newIndex.toString();
+        var increaseIndex = index++;
+        var callbackId = "_CALLBACK_" + increaseIndex.toString();
         return callbackId;
     }
     //mapp.build
@@ -99,25 +99,13 @@ function generateJsBridge(scheme) {
         }
     }
     //fireCallback
-    function fireCallback(callbackId, callbackData, deleteCallback, async) {
+    function fireCallback(callbackId, callbackData, async) {
         //获取回调对象
         var callback = callbacks[callbackId];
-        if (callback) {
-            if (async) {
-                setTimeout(function () {
-                           if (callbackData.status === ICallbackStatus.OK) {
-                           if (callback.success) {
-                           callback.success.call(null, callbackData.message);
-                           }
-                           }
-                           else {
-                           if (callback.fail) {
-                           callback.fail.call(null, callbackData.message);
-                           }
-                           }
-                           }, 0);
-            }
-            else {
+        if (!callback)
+            return;
+        if (typeof callback === "object") {
+            function executeCallback() {
                 if (callbackData.status === ICallbackStatus.OK) {
                     if (callback.success) {
                         callback.success.call(null, callbackData.message);
@@ -129,25 +117,43 @@ function generateJsBridge(scheme) {
                     }
                 }
             }
+            if (async) {
+                setTimeout(function () {
+                           executeCallback();
+                           }, 0);
+            }
+            else {
+                executeCallback();
+            }
+        }
+        else if (typeof callback === "function") {
+            if (async) {
+                setTimeout(function () {
+                           callback.call();
+                           }, 0);
+            }
+            else {
+                callback.call();
+            }
         }
         else {
             console.error("JSBridge: not found such callback: " + callbackId);
         }
-        if (deleteCallback) {
+        if (!callback.hold) {
             delete callbacks[callbackId];
         }
     }
     //native的回调函数，execGlobalCallback:
-    function execGlobalCallback(callbackId, callbackData, deleteCallback, async) {
+    function execGlobalCallback(callbackId, callbackData, async) {
         if (!callbackId) {
             console.error("jsbridge: callbackId is empty");
             return;
         }
         ;
-        fireCallback(callbackId, callbackData, deleteCallback, async);
+        fireCallback(callbackId, callbackData, async);
     }
-    function openUrl(url) {
-        window.webkit.messageHandlers.TPJsBridge.postMessage(url);
+    function postMessage(msg) {
+        window.webkit.messageHandlers.TPJsBridge.postMessage(msg);
     }
     //mapp.invoke("device", "getDeviceInfo", e);
     function invoke(className, methodName, callback) {
@@ -157,8 +163,14 @@ function generateJsBridge(scheme) {
         var callbackId;
         // 存储回调对象
         if (callback) {
-            if (typeof callback === "object") {
-                callbackId = generateCallbackId();
+            if (typeof callback === "object" || typeof callback == "function") {
+                callback.hold = typeof callback === "function";
+                if (callback.hold) {
+                    callbackId = className + "_" + methodName;
+                }
+                else {
+                    callbackId = generateCallbackId();
+                }
                 callbacks[callbackId] = callback;
             }
             else {
@@ -167,7 +179,7 @@ function generateJsBridge(scheme) {
         }
         var data = {};
         for (var key in callback) {
-            if (callback.hasOwnProperty(key) && key !== "success" && key !== "fail") {
+            if (callback.hasOwnProperty(key) && key !== "success" && key !== "fail" && key !== "hold") {
                 var element = callback[key];
                 data[key] = element;
             }
@@ -183,7 +195,7 @@ function generateJsBridge(scheme) {
             if (callbackId) {
                 url += "#" + callbackId;
             }
-            openUrl(url);
+            postMessage(url);
         }
         else {
             console.error("JSBride: the version didn't support path: " + className + "." + methodName);
@@ -194,10 +206,30 @@ function generateJsBridge(scheme) {
         ev.initEvent(type, true, true);
         document.dispatchEvent(ev);
     }
+    function execReady() {
+        if (!isReady) {
+            isReady = true;
+            postMessage("ready");
+            var callback = callbacks["_CALLBACK_READY_"];
+            if (callback) {
+                callback.call();
+            }
+        }
+    }
+    function ready(callback) {
+        if (typeof callback !== "function")
+            return;
+        if (isReady) {
+            callback.call();
+        }
+        else {
+            callbacks["_CALLBACK_READY_"] = callback;
+        }
+    }
     var userAgent = navigator.userAgent, //判断浏览器类型
     iOSPlatformRegx = /(iPad|iPhone|iPod).*? (\w+)\/([\d\.]+)/, //ios浏览器标志
     androidPlatformRegx = /(Android).*? (\w+)\/([\d\.]+)/, //android浏览器标志
-    index = 1, callbacks = {}, apiVersions = new JsBridgeMap();
+    index = 1, callbacks = {}, isReady = false, apiVersions = new JsBridgeMap();
     var platform;
     if (iOSPlatformRegx.test(userAgent)) {
         platform = IJsBridgePlatform.iOSPlatform;
@@ -216,6 +248,8 @@ function generateJsBridge(scheme) {
                     this.appVersion = "1";
                     this.build = build;
                     this.invoke = invoke;
+                    this.execReady = execReady;
+                    this.ready = ready;
                     this.execGlobalCallback = execGlobalCallback;
                     this.execPatchEvent = execPatchEvent;
                     }

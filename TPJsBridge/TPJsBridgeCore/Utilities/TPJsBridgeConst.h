@@ -21,7 +21,6 @@ FOUNDATION_EXTERN NSString* const kTPJsBridgeResultStatusKey;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeResultMessageKey;
 
 #pragma mark - key
-FOUNDATION_EXTERN NSString* const kTPJsBridgeDidReadyEventNameKey;
 FOUNDATION_EXTERN NSString* const kTPJsBridgePluginsKey;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeApiBuildFileUpdateUrlKey;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeSchemeKey;

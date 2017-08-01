@@ -97,4 +97,14 @@
         }];
     }
 }
+
+- (void)test:(TPJsInvokedUrlCommand *)command {
+    TPJsPluginResult *result = [TPJsPluginResult resultWithStatus:TPJsCommandResultStatus_OK message:@{@"key" : @"value"}];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+    }];
+    
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+}
+
 @end

@@ -22,6 +22,5 @@ NSString* const kTPJsBridgeResultMessageKey = @"message";
 
 #pragma mark - mark - key
 NSString* const kTPJsBridgeSchemeKey = @"scheme";
-NSString* const kTPJsBridgeDidReadyEventNameKey = @"jsBridgeDidReadyEventName";
 NSString* const kTPJsBridgePluginsKey = @"plugins";
 NSString* const kTPJsBridgeApiBuildFileUpdateUrlKey = @"apiBuildFileUpdateUrl";

@@ -29,7 +29,7 @@
     if (!callbackId || callbackId.length == 0 || !result) return;
     
     NSString *data = [result toJsonString];
-    NSString *js = [NSString stringWithFormat:@"%@.execGlobalCallback('%@', %@, true, false);", self.service.scheme, callbackId, data];
+    NSString *js = [NSString stringWithFormat:@"%@.execGlobalCallback('%@', %@, false);", self.service.scheme, callbackId, data];
     [self.service evaluateJavaScript:js completionHandler:nil];
 }
 
