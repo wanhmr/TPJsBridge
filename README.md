@@ -4,7 +4,7 @@ An iOS/OSX bridge for sending messages between Obj-C and JavaScript in WKWebView
 TPJsBridge 是一个插件化的 jsBridge 库，参考了 cordova，但做了简化，能够实现复杂的 native 与 wap 的交互
     
 ## Usage
-`pod 'TPJsBridge', '~> 0.0.10'`
+`pod 'TPJsBridge', '~> 0.0.11'`
 
 ```
 Initialization code:
