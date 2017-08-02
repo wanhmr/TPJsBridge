@@ -129,11 +129,11 @@ function generateJsBridge(scheme) {
         else if (typeof callback === "function") {
             if (async) {
                 setTimeout(function () {
-                           callback.call();
+                           callback.call(callbackData.message);
                            }, 0);
             }
             else {
-                callback.call();
+                callback.call(callbackData.message);
             }
         }
         else {
