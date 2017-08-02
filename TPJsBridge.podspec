@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TPJsBridge"
-  s.version      = "0.0.13"
+  s.version      = "0.0.14"
   s.summary      = "An iOS bridge for sending messages between Obj-C and JavaScript in WKWebView."
 
   # This description is used to generate tags and improve search results.
