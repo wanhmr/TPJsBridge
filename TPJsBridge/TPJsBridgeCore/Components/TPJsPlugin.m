@@ -42,6 +42,11 @@
                                                  name:kTPJsBridgeDidCloseNotification
                                                object:self.service];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onReady:)
+                                                 name:kTPJsBridgeDidReadyNotification
+                                               object:self.service];
+    
 }
 
 
@@ -72,6 +77,10 @@
 }
 
 - (void)onClose:(NSNotification *)notification {
+    
+}
+
+- (void)onReady:(NSNotification *)notification {
     
 }
 

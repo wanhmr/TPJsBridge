@@ -25,8 +25,12 @@
 - (void)onConnect:(NSNotification *)notification NS_REQUIRES_SUPER;
 
 /**
- * 监听Bridge服务关闭
+ 监听Bridge服务关闭
  */
 - (void)onClose:(NSNotification *)notification NS_REQUIRES_SUPER;
 
+/**
+ 监听Bridge服务已准备好
+ */
+- (void)onReady:(NSNotification *)notification;
 @end

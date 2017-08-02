@@ -145,12 +145,12 @@ function generateJsBridge(scheme) {
     }
     //native的回调函数，execGlobalCallback:
     function execGlobalCallback(callbackId, callbackData, async) {
-        if (!callbackId) {
-            console.error("jsbridge: callbackId is empty");
-            return;
+        if (callbackId) {
+            fireCallback(callbackId, callbackData, async);
         }
-        ;
-        fireCallback(callbackId, callbackData, async);
+        else {
+            console.error("jsbridge: callbackId is empty");
+        }
     }
     function postMessage(msg) {
         window.webkit.messageHandlers.TPJsBridge.postMessage(msg);
@@ -166,7 +166,7 @@ function generateJsBridge(scheme) {
             if (typeof callback === "object" || typeof callback == "function") {
                 callback.hold = typeof callback === "function";
                 if (callback.hold) {
-                    callbackId = className + "_" + methodName;
+                    callbackId = "__CALLBACK__" + className + "_" + methodName;
                 }
                 else {
                     callbackId = generateCallbackId();

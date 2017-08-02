@@ -96,14 +96,8 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
 
 - (void)addScriptMessageHandler {
     WKWebView *webView = self.webView;
-    WKWebViewConfiguration *configuration = webView.configuration;
-    if (configuration == nil) {
-        configuration = [WKWebViewConfiguration new];
-    }
-    WKUserContentController *userContentController = configuration.userContentController;
-    if (userContentController == nil) {
-        userContentController = [WKUserContentController new];
-    }
+    WKUserContentController *userContentController = webView.configuration.userContentController;
+    NSAssert(userContentController != nil, @"TPJsBridge: webview.configuration.userContentController cannot be nil.");
     
     NSString *jsBridge = [self.jsBridgeCodeProvider jsBridgeCode];
     NSString *readyJs = [NSString stringWithFormat:@"%@.execReady();", self.scheme];
@@ -125,19 +119,25 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
 
 #pragma mark - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    if (!message.body) {
+    id msgBody = message.body;
+    if (!msgBody || [msgBody isKindOfClass:[NSNull class]]) {
         return;
     }
     
-    if ([message.name isEqualToString:kTPJsBridgeScriptMessageHandlerName]) {
-        NSString *urlString = message.body;
-        if (urlString.length == 0) {
+    if ([message.name isEqualToString:kTPJsBridgeScriptMessageHandlerName] &&
+        [msgBody isKindOfClass:[NSString class]]) {
+        NSString *bodyString = msgBody;
+        if (bodyString.length == 0) {
             return;
         }
-        NSURL *url = [NSURL URLWithString:urlString];
-        TPJsInvokedUrlCommand *command = [TPJsInvokedUrlCommand commandWithUrl:url];
-        if (command) {
-            [self.commandQueue excuteCommand:command];
+        if ([bodyString isEqualToString:@"ready"]) {
+            [self noticeReady];
+        }else {
+            NSURL *url = [NSURL URLWithString:bodyString];
+            TPJsInvokedUrlCommand *command = [TPJsInvokedUrlCommand commandWithUrl:url];
+            if (command) {
+                [self.commandQueue excuteCommand:command];
+            }
         }
     }
     
