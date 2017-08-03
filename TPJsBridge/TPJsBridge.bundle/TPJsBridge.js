@@ -156,26 +156,25 @@ function generateJsBridge(scheme) {
         window.webkit.messageHandlers.TPJsBridge.postMessage(msg);
     }
     //mapp.invoke("device", "getDeviceInfo", e);
-    function invoke(className, methodName, callback) {
+    function invoke(className, methodName, callback, hold) {
+        if (hold === void 0) { hold = false; }
         if (!className || !methodName)
             return null;
         var url;
         var callbackId;
         // 存储回调对象
         if (callback) {
-            if (typeof callback === "object" || typeof callback == "function") {
-                callback.hold = typeof callback === "function";
-                if (callback.hold) {
-                    callbackId = "__CALLBACK__" + className + "_" + methodName;
-                }
-                else {
-                    callbackId = generateCallbackId();
-                }
-                callbacks[callbackId] = callback;
+            if (hold) {
+                callbackId = "__CALLBACK__" + className + "_" + methodName;
             }
             else {
-                console.log("jsbridge: callback is't object");
+                callbackId = generateCallbackId();
             }
+            callback.hold = hold;
+            callbacks[callbackId] = callback;
+        }
+        else {
+            console.info("callback did not exist.");
         }
         var data = {};
         for (var key in callback) {
