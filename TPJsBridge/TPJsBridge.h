@@ -1,16 +1,13 @@
 //
 //  TPJsBridge.h
-//  TPJsBridge
+//  Pods
 //
-//  Created by Tpphha on 2017/5/20.
-//  Copyright © 2017年 Tpphha. All rights reserved.
+//  Created by Tpphha on 2017/8/4.
+//
 //
 
-#ifndef TPJsBridge_h
-#define TPJsBridge_h
+#import <Foundation/Foundation.h>
 
-#import "TPJsConfiguration.h"
-#import "TPJsService.h"
-#import "TPJsPlugin.h"
+@interface TPJsBridge : NSObject
 
-#endif /* TPJsBridge_h */
+@end
