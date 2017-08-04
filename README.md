@@ -28,7 +28,7 @@ NSString *configFilePath = [[NSBundle mainBundle] pathForResource:@"TPCustomJsBr
 NSString *apiBuildFilePath = [[NSBundle mainBundle] pathForResource:@"TPCustomJsBridgeApiBuild" ofType:@"js"];
     
 TPJsConfiguration *configuration = [[TPJsConfiguration alloc] initWithConfigFilePath:configFilePath apiBuildFilePath:apiBuildFilePath];
-    self.jsBridgeService = [[TPJsService alloc] initWithConfiguration:configuration];
+self.jsBridgeService = [[TPJsService alloc] initWithConfiguration:configuration];
     
 [self.jsBridgeService connect:self.webView];
 ```
