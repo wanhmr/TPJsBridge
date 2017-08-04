@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "TPJsInvokedUrlCommand.h"
-#import "TPJsPluginResult.h"
 #import "TPJsPluginResultEmitter.h"
 
 @interface TPJsPlugin : NSObject

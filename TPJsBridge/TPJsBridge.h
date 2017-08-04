@@ -9,6 +9,8 @@
 #ifndef TPJsBridge_h
 #define TPJsBridge_h
 
-
+#import "TPJsConfiguration.h"
+#import "TPJsService.h"
+#import "TPJsPlugin.h"
 
 #endif /* TPJsBridge_h */

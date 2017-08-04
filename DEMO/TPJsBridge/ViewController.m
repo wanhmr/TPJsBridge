@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <TPJsConfiguration.h>
-#import <TPJsService.h>
+#import <TPJsBridge/TPJsBridge.h>
 
 @interface ViewController () <WKUIDelegate, WKNavigationDelegate>
 @property (nonatomic, strong) TPJsService *service;
