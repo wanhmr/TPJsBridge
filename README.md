@@ -31,6 +31,11 @@ TPJsConfiguration *configuration = [[TPJsConfiguration alloc] initWithConfigFile
 self.jsBridgeService = [[TPJsService alloc] initWithConfiguration:configuration];
     
 [self.jsBridgeService connect:self.webView];
+
+on dealloc:
+- (void)dealloc {
+    [self.jsBridgeService close];
+}
 ```
     
     
