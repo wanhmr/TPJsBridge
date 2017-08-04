@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 @class TPJsPlugin;
-@class TPJsService;
 
 @interface TPJsPluginManager : NSObject
-- (instancetype)initWithService:(TPJsService *)service plugins:(NSArray<NSDictionary *> *)plugins;
+- (instancetype)initWithPlugins:(NSArray<NSDictionary *> *)plugins;
+
+- (NSArray<TPJsPlugin *> *)getAllPlugins;
 
 - (TPJsPlugin *)getPluginWithName:(NSString *)pName;
+
 
 - (NSString *)getPluginRealMethodWithName:(NSString *)pName provideMethodName:(NSString *)provideMethodName;
 @end

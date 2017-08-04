@@ -1,1811 +1,664 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0008F3D5F363ADA8971EC870B3A075D1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsPluginResult.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0BE5031C328A231C9566902D65A4B12D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>17A8789257B2FB5303E8750C4175A6F3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>116718FFAB2F821B136D2F27E518E530</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsConfigParser.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>15D101E7DCC5FE7E4320A6D6063117AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TPJsBridge.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17A8789257B2FB5303E8750C4175A6F3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsPlugin_device.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17ECFA4395A678982731E35BF7F8B127</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A038F325301F3921719C44219BC012D2</string>
-				<string>C5B61333102AFB85ABAC2EAA4B03D86F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>17FC28B7F52C292F42025073499D6A72</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>15D101E7DCC5FE7E4320A6D6063117AE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>1D3EC88C363D5FD0DA2F32A8120C734F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-TPJsBridge-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1D401FEFE7CB2BE2FC4725465EB8C358</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsBridgeConst.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>22A1D665287B2E0D1740CDB956F67231</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6DC2F1DDD11A4A3F506676738EB184C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>2A151709FA273E518E2124AA6DE5D0ED</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8FA154E6CA802218AD7817D40CD09E4B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>73D845169C007274504228832AD8E243</string>
-				<string>5184430A2EB74B2F1AD2C0FC42C7F5E0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2E3D1DE90380D749862069381628249D</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>DC125B21DED9E15F2C4A2E33A7B91EDB</string>
-				<string>17FC28B7F52C292F42025073499D6A72</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2E6927E30FD2072FD9A4EEACDD5B7436</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsCommandQueue.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2EB42AFD688C2B0327C1B4C7BD54C621</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B6AF1776961C02DE085E05DB66F7B6D8</string>
-				<string>DF3F9FB0D125B6DF87C405DB395E522F</string>
-				<string>54FE33C2D7D372E1FAF56FEF466DE845</string>
-				<string>7C445DD112D4040ED15DF1B44A8B0186</string>
-				<string>9C4AA5EAFC38CF9630C723B04306C3D6</string>
-				<string>1D401FEFE7CB2BE2FC4725465EB8C358</string>
-				<string>A43FB7EB6FA9DD15803BB69E839BC541</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Utilities</string>
-			<key>path</key>
-			<string>Utilities</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>363819F784986CF33341E5E9569EB49B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C60E187E1FA91A7A41C2162E88D6CBD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>37B902F8899181BE658C8EEF0EF3F2CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8F81F881E4512AD3090B15CC6EBE6E44</string>
-				<string>2EB42AFD688C2B0327C1B4C7BD54C621</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>TPJsBridgeCore</string>
-			<key>path</key>
-			<string>TPJsBridgeCore</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>380B1BB4C8896629C8027742DF909AAF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>610464AC9DA45129A71D1B7F358A439E</string>
-				<string>FEF40E6A713E5DAA01DB48C46415137B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>38F0299A9E10C3BB370CA96FEE86D511</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>40C141A6BBB1A517A556317D978DC60C</string>
-				<string>4BCF9742BCC82E72925831788CA664A2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>39A4BEE060E8D00A66EE494ECCC7D8C7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2E6927E30FD2072FD9A4EEACDD5B7436</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>3AA345539CE6E62D633A3668D6D46082</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1D3EC88C363D5FD0DA2F32A8120C734F</string>
-				<string>5A47674EBDC107D7019B1094EEED2F8D</string>
-				<string>9EDFCF1D113EE6FDE2D169823A65C0C0</string>
-				<string>7FB00932AE2D26AE595BC2BF031E2AB8</string>
-				<string>7C5C3375C876A68946EB1A05A8F1E873</string>
-				<string>47021FB5AAB06048B3790BE6A22F9768</string>
-				<string>15D101E7DCC5FE7E4320A6D6063117AE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-TPJsBridge</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-TPJsBridge</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3ADF00720B338DBB1972A11CC9E9E2D2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2A151709FA273E518E2124AA6DE5D0ED</string>
-				<string>61275A7FC395945AEA6F53ADDD2E2527</string>
-				<string>DE7207F70BA89BF89A56429BD57C6662</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>TPJsBridge</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3F37E8229D409B2DC48D8800C71A08E5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsPlugin.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>40C141A6BBB1A517A556317D978DC60C</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-TPJsBridge.a</string>
-			<key>path</key>
-			<string>libPods-TPJsBridge.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>41F2F4F46CE16E4378BBFB24C74355FE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsBridge-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>433CD3331B6C3787F473C941B61FC68F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EFA1650562DF57845D23B2463D53DA6A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>45DBF3C8FDEC5AA64AD7EF38CDEA3936</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsPluginInfo.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>46519E2D932271FDFA61BB828A719916</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0008F3D5F363ADA8971EC870B3A075D1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>47021FB5AAB06048B3790BE6A22F9768</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TPJsBridge.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>473345736B4CDA0D66BD8FD7F552CB80</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsCommandDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4BCF9742BCC82E72925831788CA664A2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libTPJsBridge.a</string>
-			<key>path</key>
-			<string>libTPJsBridge.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4C60E187E1FA91A7A41C2162E88D6CBD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsPluginManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5184430A2EB74B2F1AD2C0FC42C7F5E0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>53E0AE965C2538B49540683074B09026</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1D401FEFE7CB2BE2FC4725465EB8C358</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>54FE33C2D7D372E1FAF56FEF466DE845</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>NSString+TPJsBridge.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>56C866E06B9A968F68AC1E6D89639FC6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C00586E80704659100831D78B6FF134E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5867D217EA251924BBF13EABBF8DBB86</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9C4AA5EAFC38CF9630C723B04306C3D6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5A47674EBDC107D7019B1094EEED2F8D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-TPJsBridge-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5F33E78F2DC948696EAA7DF4F318DFD3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>473345736B4CDA0D66BD8FD7F552CB80</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>610464AC9DA45129A71D1B7F358A439E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C05E5708FF3083382A6AFDBC5180C171</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>61275A7FC395945AEA6F53ADDD2E2527</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B34A3C8C0900D09E458D85D329C4FB85</string>
-				<string>41F2F4F46CE16E4378BBFB24C74355FE</string>
-				<string>7997C42B5AD6E90123ACC25FA063B07E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>DEMO/Pods/Target Support Files/TPJsBridge</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6B1EAD899B65BA1063EDC7A8273416F7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsPlugin_device.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6C34FBC17ED85EEBFB79FEB372228E71</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>ED1919097B4F709FE9A7FC652E6277A9</string>
-			<key>remoteInfo</key>
-			<string>TPJsBridge</string>
-		</dict>
-		<key>6DC2F1DDD11A4A3F506676738EB184C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsCommandDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6E2879C02A1D58800C0546F79903BFCC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7723B40EC69A69FF3F8FCDD721AC8E3E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7022ED64272AFB22D3BBCA7DD828273E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>41F2F4F46CE16E4378BBFB24C74355FE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>722D698FE1823F458A9A9FDB2FEC95BD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B06F6F672935DC56EC7EE423F2AB784C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>73D845169C007274504228832AD8E243</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_DEBUG=1</string>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7609D1ADA312731AD25E8A3D8107CFD1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D30EDD9365AC8A76E9E7607F02E6369F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7723B40EC69A69FF3F8FCDD721AC8E3E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsPluginInfo.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7880A0F0B65A789EB84583C8DA14C3AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsService.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7997C42B5AD6E90123ACC25FA063B07E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsBridge-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B26A1D3423920234511A49DF4A15374</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3ADF00720B338DBB1972A11CC9E9E2D2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7C445DD112D4040ED15DF1B44A8B0186</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>NSString+TPJsBridge.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7C5C3375C876A68946EB1A05A8F1E873</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-TPJsBridge-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7CEFF160145EB40CB7851644B81E6E49</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BBD0FE539AA46C6D44AC2E7223C2C243</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7DA952C9BE8387F7BF6E3B97C3197254</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EBDFFBCE8964E1CB6D1AC3E4506627FD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
-				<string>7B26A1D3423920234511A49DF4A15374</string>
-				<string>433CD3331B6C3787F473C941B61FC68F</string>
-				<string>38F0299A9E10C3BB370CA96FEE86D511</string>
-				<string>E66EF9DC1A777BDF8F048DA17EAD5F2D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7FB00932AE2D26AE595BC2BF031E2AB8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-TPJsBridge-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8332173E3C402F6456AFC70A6A33E3BA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D24D814CF958F9F67DC5C02ECA295A5C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>85F16151E9BD7FBD13FCABD5E511D1E4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7880A0F0B65A789EB84583C8DA14C3AE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>88CEE6EF23A039931D8C85F1761954A9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsCommandQueue.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>89E6A3A9346E5BF91D4AC803216E099B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsPlugin.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8ACC17037EA0CD58BEA539F491B199E6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DF3F9FB0D125B6DF87C405DB395E522F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8F81F881E4512AD3090B15CC6EBE6E44</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BC4614B4A9A84567C23C3D0AA293ECDA</string>
-				<string>BBD0FE539AA46C6D44AC2E7223C2C243</string>
-				<string>6DC2F1DDD11A4A3F506676738EB184C9</string>
-				<string>473345736B4CDA0D66BD8FD7F552CB80</string>
-				<string>2E6927E30FD2072FD9A4EEACDD5B7436</string>
-				<string>88CEE6EF23A039931D8C85F1761954A9</string>
-				<string>C960C492793FF682DD0F0E2F62DF81FD</string>
-				<string>116718FFAB2F821B136D2F27E518E530</string>
-				<string>D24D814CF958F9F67DC5C02ECA295A5C</string>
-				<string>C00586E80704659100831D78B6FF134E</string>
-				<string>89E6A3A9346E5BF91D4AC803216E099B</string>
-				<string>3F37E8229D409B2DC48D8800C71A08E5</string>
-				<string>45DBF3C8FDEC5AA64AD7EF38CDEA3936</string>
-				<string>7723B40EC69A69FF3F8FCDD721AC8E3E</string>
-				<string>4C60E187E1FA91A7A41C2162E88D6CBD</string>
-				<string>D30EDD9365AC8A76E9E7607F02E6369F</string>
-				<string>0008F3D5F363ADA8971EC870B3A075D1</string>
-				<string>C6B1EC413BF6EBA203913EA4705A1A74</string>
-				<string>EBDFFBCE8964E1CB6D1AC3E4506627FD</string>
-				<string>7880A0F0B65A789EB84583C8DA14C3AE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Components</string>
-			<key>path</key>
-			<string>Components</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8FA154E6CA802218AD7817D40CD09E4B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E1F018418016F9D04DB2B2BE33B811C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>TPJsBridge</string>
-			<key>path</key>
-			<string>TPJsBridge</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9176A90B29544C42EC5C5C55209848F8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B6AF1776961C02DE085E05DB66F7B6D8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>91AD31081CAAFECF41AB446F13E8C55F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C960C492793FF682DD0F0E2F62DF81FD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>text.script.ruby</string>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>94D5E12C1D2B6A04363EC48696A18547</key>
-		<dict>
-			<key>fileRef</key>
-			<string>116718FFAB2F821B136D2F27E518E530</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>97B275527B1FFA0F71BBF674399DC3B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EF0448E2D83F0D89769A90B168A98FF9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9C4AA5EAFC38CF9630C723B04306C3D6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsBridgeConst.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9EDFCF1D113EE6FDE2D169823A65C0C0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-TPJsBridge-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A038F325301F3921719C44219BC012D2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B34A3C8C0900D09E458D85D329C4FB85</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/TPJsBridge/TPJsBridge-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A2020F2FCA38A820BABC2DCC4B884034</key>
-		<dict>
-			<key>fileRef</key>
-			<string>45DBF3C8FDEC5AA64AD7EF38CDEA3936</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>A43FB7EB6FA9DD15803BB69E839BC541</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsBridgeMacro.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A7AEFAE8D80F3828A518774AF4A2EA3A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C6B1EC413BF6EBA203913EA4705A1A74</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A810674C6F3FB9149350899B95751BF1</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>2E3D1DE90380D749862069381628249D</string>
-			<key>buildPhases</key>
-			<array>
-				<string>AA65B372265C6E5F4470E54E07902E4B</string>
-				<string>722D698FE1823F458A9A9FDB2FEC95BD</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C82B2E19CC6F5FD0CD08CBA9B11589A6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-TPJsBridge</string>
-			<key>productName</key>
-			<string>Pods-TPJsBridge</string>
-			<key>productReference</key>
-			<string>40C141A6BBB1A517A556317D978DC60C</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>AA65B372265C6E5F4470E54E07902E4B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E6192DCC238A83B2CE66F936BBB5864D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>AE186CEFEC8E444A9F9E67E13820338F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8ACC17037EA0CD58BEA539F491B199E6</string>
-				<string>FF1CFDC632AEBBA243DF030F096D78BA</string>
-				<string>7022ED64272AFB22D3BBCA7DD828273E</string>
-				<string>7CEFF160145EB40CB7851644B81E6E49</string>
-				<string>53E0AE965C2538B49540683074B09026</string>
-				<string>5F33E78F2DC948696EAA7DF4F318DFD3</string>
-				<string>DBFF83228288A0294C5E79BBB0B067D5</string>
-				<string>94D5E12C1D2B6A04363EC48696A18547</string>
-				<string>56C866E06B9A968F68AC1E6D89639FC6</string>
-				<string>CA1AD918B19855678265E63C6745C716</string>
-				<string>0BE5031C328A231C9566902D65A4B12D</string>
-				<string>6E2879C02A1D58800C0546F79903BFCC</string>
-				<string>7609D1ADA312731AD25E8A3D8107CFD1</string>
-				<string>A7AEFAE8D80F3828A518774AF4A2EA3A</string>
-				<string>85F16151E9BD7FBD13FCABD5E511D1E4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B06F6F672935DC56EC7EE423F2AB784C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C05E5708FF3083382A6AFDBC5180C171</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B34A3C8C0900D09E458D85D329C4FB85</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>TPJsBridge.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B6AF1776961C02DE085E05DB66F7B6D8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>NSBundle+TPJsBridge.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BABBA2A070B828F92C0A06A239ECE450</key>
-		<dict>
-			<key>fileRef</key>
-			<string>54FE33C2D7D372E1FAF56FEF466DE845</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>BBD0FE539AA46C6D44AC2E7223C2C243</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsBridgeCodeProvider.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BC4614B4A9A84567C23C3D0AA293ECDA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsBridgeCodeProvider.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C00586E80704659100831D78B6FF134E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsInvokedUrlCommand.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C05E5708FF3083382A6AFDBC5180C171</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>C4826A72906A7B72ED68004761ECAAB3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6B1EAD899B65BA1063EDC7A8273416F7</string>
-				<string>17A8789257B2FB5303E8750C4175A6F3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>TPJsBridePluginExtensions</string>
-			<key>path</key>
-			<string>TPJsBridePluginExtensions</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5B61333102AFB85ABAC2EAA4B03D86F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B34A3C8C0900D09E458D85D329C4FB85</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/TPJsBridge/TPJsBridge-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C6B1EC413BF6EBA203913EA4705A1A74</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsPluginResult.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C82B2E19CC6F5FD0CD08CBA9B11589A6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>TPJsBridge</string>
-			<key>target</key>
-			<string>ED1919097B4F709FE9A7FC652E6277A9</string>
-			<key>targetProxy</key>
-			<string>6C34FBC17ED85EEBFB79FEB372228E71</string>
-		</dict>
-		<key>C960C492793FF682DD0F0E2F62DF81FD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsConfigParser.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CA1AD918B19855678265E63C6745C716</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3F37E8229D409B2DC48D8800C71A08E5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CF2632732FB21FCAC4995D7CD85A3B9E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9176A90B29544C42EC5C5C55209848F8</string>
-				<string>BABBA2A070B828F92C0A06A239ECE450</string>
-				<string>97B275527B1FFA0F71BBF674399DC3B3</string>
-				<string>DC8F6586CCED5FA78D20C04D0A9A9B59</string>
-				<string>5867D217EA251924BBF13EABBF8DBB86</string>
-				<string>D0AE17D2F469DCFF9E8E6E6D96FBBDC8</string>
-				<string>22A1D665287B2E0D1740CDB956F67231</string>
-				<string>39A4BEE060E8D00A66EE494ECCC7D8C7</string>
-				<string>91AD31081CAAFECF41AB446F13E8C55F</string>
-				<string>8332173E3C402F6456AFC70A6A33E3BA</string>
-				<string>D43E08C9947031DC3CFF9CFD4A8ABEB2</string>
-				<string>DD0F185EB324E2D5A7431C391A5641DC</string>
-				<string>A2020F2FCA38A820BABC2DCC4B884034</string>
-				<string>363819F784986CF33341E5E9569EB49B</string>
-				<string>46519E2D932271FDFA61BB828A719916</string>
-				<string>7DA952C9BE8387F7BF6E3B97C3197254</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D0AE17D2F469DCFF9E8E6E6D96FBBDC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A43FB7EB6FA9DD15803BB69E839BC541</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>D24D814CF958F9F67DC5C02ECA295A5C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsInvokedUrlCommand.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D30EDD9365AC8A76E9E7607F02E6369F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TPJsPluginManager.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>38F0299A9E10C3BB370CA96FEE86D511</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>A810674C6F3FB9149350899B95751BF1</string>
-				<string>ED1919097B4F709FE9A7FC652E6277A9</string>
-			</array>
-		</dict>
-		<key>D43E08C9947031DC3CFF9CFD4A8ABEB2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>89E6A3A9346E5BF91D4AC803216E099B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DBFF83228288A0294C5E79BBB0B067D5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>88CEE6EF23A039931D8C85F1761954A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DC125B21DED9E15F2C4A2E33A7B91EDB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>47021FB5AAB06048B3790BE6A22F9768</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>DC8F6586CCED5FA78D20C04D0A9A9B59</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BC4614B4A9A84567C23C3D0AA293ECDA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DD0F185EB324E2D5A7431C391A5641DC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6B1EAD899B65BA1063EDC7A8273416F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DE7207F70BA89BF89A56429BD57C6662</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EF0448E2D83F0D89769A90B168A98FF9</string>
-				<string>C4826A72906A7B72ED68004761ECAAB3</string>
-				<string>37B902F8899181BE658C8EEF0EF3F2CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>TPJsBridge</string>
-			<key>path</key>
-			<string>TPJsBridge</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DF3F9FB0D125B6DF87C405DB395E522F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>NSBundle+TPJsBridge.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E1F018418016F9D04DB2B2BE33B811C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>path</key>
-			<string>TPJsBridge.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E350F05D0C07479E0CC3ED8D9C1A9AB6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>WebKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WebKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>E6192DCC238A83B2CE66F936BBB5864D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9EDFCF1D113EE6FDE2D169823A65C0C0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E66EF9DC1A777BDF8F048DA17EAD5F2D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3AA345539CE6E62D633A3668D6D46082</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EBDFFBCE8964E1CB6D1AC3E4506627FD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ED1919097B4F709FE9A7FC652E6277A9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>17ECFA4395A678982731E35BF7F8B127</string>
-			<key>buildPhases</key>
-			<array>
-				<string>AE186CEFEC8E444A9F9E67E13820338F</string>
-				<string>380B1BB4C8896629C8027742DF909AAF</string>
-				<string>CF2632732FB21FCAC4995D7CD85A3B9E</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>TPJsBridge</string>
-			<key>productName</key>
-			<string>TPJsBridge</string>
-			<key>productReference</key>
-			<string>4BCF9742BCC82E72925831788CA664A2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>EF0448E2D83F0D89769A90B168A98FF9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TPJsBridge.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EFA1650562DF57845D23B2463D53DA6A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C05E5708FF3083382A6AFDBC5180C171</string>
-				<string>E350F05D0C07479E0CC3ED8D9C1A9AB6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEF40E6A713E5DAA01DB48C46415137B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E350F05D0C07479E0CC3ED8D9C1A9AB6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FF1CFDC632AEBBA243DF030F096D78BA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7C445DD112D4040ED15DF1B44A8B0186</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EC2AC5CF7F91F32D73499A21E88737E /* NSBundle+TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE003CD8DAF518CA5E5AFC486BAC215 /* NSBundle+TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13E7943C2627C45EB1C6520102FA2E89 /* NSString+TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = D008225EDF95F52F9C83106C78475C41 /* NSString+TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D869042F09AAF4483088FDA1A4E309E /* TPJsBridgeCodeProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A28699EDECD6B7290F8EEF1B64FE0DF /* TPJsBridgeCodeProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		249F5A23A25559A74AD133F348EE7A11 /* TPJsInvokedUrlCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0206E0C2B5C99C2A8AA362D50AFBD /* TPJsInvokedUrlCommand.m */; };
+		27A68E17E102E8B0F66CC40EF6626E4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596A5E7C40FB07FDAA78D426185FA95B /* Foundation.framework */; };
+		2F7341F17B9861D10484DE6DCBBADB35 /* TPJsCommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A224843471ED7FCE5862A85152435D1D /* TPJsCommandQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30475C2D2CE3140D4C9971D931B2E6BA /* TPJsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B1B25B750FB8E1E9B309A954FE78B5 /* TPJsPlugin.m */; };
+		360C2ECF67C18A7C2DAEEAE1ABCF54EC /* TPJsPluginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 200B6A432D26470992AE97C909094757 /* TPJsPluginInfo.m */; };
+		3A4B2CB4AD0883407106A482840C0C26 /* TPJsInvokedUrlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3B20A47076208168EF8DF2DC044EC2 /* TPJsInvokedUrlCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B8FAFA87EC1397E83613675647E549B /* TPJsBridgeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F2462104F8A88B8CF201BE907D825 /* TPJsBridgeConst.m */; };
+		42F915F744BFA25AD929A2D04848DA12 /* Pods-TPJsBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFCF1D113EE6FDE2D169823A65C0C0 /* Pods-TPJsBridge-dummy.m */; };
+		4326105E454C50A9064D4D9C85AD1BF3 /* TPJsBridgeConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 230C09F4E1855924F7027A753AE7C158 /* TPJsBridgeConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C351B1E3050DCABA526BB3A64CCA1F2 /* NSString+TPJsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3048AAF1444AA385C5B154819FE8F7 /* NSString+TPJsBridge.m */; };
+		4C3DFA7B2B2F253E8DA015866EE87121 /* TPJsBridgePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89FECE16E66CAA10D7AFDAEAE9BE60FC /* TPJsBridgePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D9734050A75AB2AB8AA201E8ACC7749 /* TPJsService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6343F4FEF122F7A11761D3CBF697BF /* TPJsService.m */; };
+		67B0283E9B6B71485F1DDABB43D9FC2A /* TPJsPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5624901379508083D3F79128CA0D576D /* TPJsPluginManager.m */; };
+		6EB3E4C624BDB2C8D933E04E219DECC2 /* TPJsPlugin_device.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8789257B2FB5303E8750C4175A6F3 /* TPJsPlugin_device.m */; };
+		6FCC51186A3EF11B680F692367F98315 /* TPJsConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AB7833AA32009104C9516DEA5ADACE08 /* TPJsConfigParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B4F23B5C555B121BA19CCDDB24A82BC /* TPJsCommandQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE4CB069E8C6656FF32418818A455BA /* TPJsCommandQueue.m */; };
+		957E48C769BD07158264ABB806BEB7BB /* TPJsBridgeMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D0B5E4C9F7212AD0C2D02897B605B08 /* TPJsBridgeMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95C6F334CDFC3AA048A151C26BB230A2 /* TPJsConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F9F447046C5EE157245B6FABB5FD0F /* TPJsConfigParser.m */; };
+		98DED39324F046403E3A5D0656A92CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596A5E7C40FB07FDAA78D426185FA95B /* Foundation.framework */; };
+		A240D621C534E2678B4C28314D49A0E0 /* NSBundle+TPJsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D990180376A721D715413E6B24DD5D /* NSBundle+TPJsBridge.m */; };
+		A417C2D7014F09017DC0D6DD7F8EB89D /* TPJsPluginInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 05737EB63BF846B30171520F5C48B82E /* TPJsPluginInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABE4CFF8E80D8B70A2223E60D9F409D6 /* TPJsService.h in Headers */ = {isa = PBXBuildFile; fileRef = F328FAB76E2A3335345E954DCD8625AB /* TPJsService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF71346BBB8169ED226339E8B3ADA7B5 /* TPJsPluginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7811188C2AC1364D872DAF87546F1980 /* TPJsPluginResult.m */; };
+		B2CC31ED97CCC2714C44373935B58B92 /* TPJsPlugin_device.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1EAD899B65BA1063EDC7A8273416F7 /* TPJsPlugin_device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD00B0F29EE9434F0D9712DA20065A8D /* TPJsPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8599157224699568D8DE632E92541F18 /* TPJsPluginManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D29E384A0C036818A2743CADEA5D569A /* TPJsBridgeCodeProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F34FC3312E880B56FAEFCF79BC1BF1 /* TPJsBridgeCodeProvider.m */; };
+		D7CAF7CCFB0ED4494672BF34449BA823 /* TPJsPluginResultEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBA2D3E2E02E722CD804897119EB1CA /* TPJsPluginResultEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D860EE9563A6E85E2850A7F63B70C186 /* TPJsBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F2F4F46CE16E4378BBFB24C74355FE /* TPJsBridge-dummy.m */; };
+		E9E02145B4CCCB16D36A222113F244A7 /* TPJsPluginResultEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A14DF1854EE86CB896166102F457A1 /* TPJsPluginResultEmitter.m */; };
+		EBD6B5BB2AE9E474E81CCA3BE4C98F49 /* TPJsPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 625D1B5C4EF52BB348134C87F170E58D /* TPJsPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F01D61651F342BE200A13966 /* TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0448E2D83F0D89769A90B168A98FF9 /* TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F095669A1F3425C5000DDA13 /* TPJsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F09566981F342541000DDA13 /* TPJsConfiguration.m */; };
+		F095669B1F3425E4000DDA13 /* TPJsConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = F09566971F342541000DDA13 /* TPJsConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F95240115C5DA4E49E5ECCE934FDBFC5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDB8272AF7DA52CED82F42852514AD3 /* WebKit.framework */; };
+		FC62500C2185CFAD29A7452F2C9BA3AE /* TPJsPluginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 40083E8237B5578FC6C059CA5CD0B01E /* TPJsPluginResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65A96FC250124BC708D24DAEB92960ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 388A496597635949C91EF0B03D07498E;
+			remoteInfo = TPJsBridge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05737EB63BF846B30171520F5C48B82E /* TPJsPluginInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginInfo.h; sourceTree = "<group>"; };
+		09A14DF1854EE86CB896166102F457A1 /* TPJsPluginResultEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginResultEmitter.m; sourceTree = "<group>"; };
+		0D0B5E4C9F7212AD0C2D02897B605B08 /* TPJsBridgeMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeMacro.h; sourceTree = "<group>"; };
+		138F2462104F8A88B8CF201BE907D825 /* TPJsBridgeConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsBridgeConst.m; sourceTree = "<group>"; };
+		15D101E7DCC5FE7E4320A6D6063117AE /* Pods-TPJsBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPJsBridge.release.xcconfig"; sourceTree = "<group>"; };
+		17A8789257B2FB5303E8750C4175A6F3 /* TPJsPlugin_device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPlugin_device.m; sourceTree = "<group>"; };
+		1D3EC88C363D5FD0DA2F32A8120C734F /* Pods-TPJsBridge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TPJsBridge-acknowledgements.markdown"; sourceTree = "<group>"; };
+		200B6A432D26470992AE97C909094757 /* TPJsPluginInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginInfo.m; sourceTree = "<group>"; };
+		230C09F4E1855924F7027A753AE7C158 /* TPJsBridgeConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeConst.h; sourceTree = "<group>"; };
+		2A3048AAF1444AA385C5B154819FE8F7 /* NSString+TPJsBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+TPJsBridge.m"; sourceTree = "<group>"; };
+		37D990180376A721D715413E6B24DD5D /* NSBundle+TPJsBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TPJsBridge.m"; sourceTree = "<group>"; };
+		3A28699EDECD6B7290F8EEF1B64FE0DF /* TPJsBridgeCodeProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeCodeProvider.h; sourceTree = "<group>"; };
+		3AE003CD8DAF518CA5E5AFC486BAC215 /* NSBundle+TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TPJsBridge.h"; sourceTree = "<group>"; };
+		40083E8237B5578FC6C059CA5CD0B01E /* TPJsPluginResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginResult.h; sourceTree = "<group>"; };
+		40C141A6BBB1A517A556317D978DC60C /* libPods-TPJsBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPJsBridge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41F2F4F46CE16E4378BBFB24C74355FE /* TPJsBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPJsBridge-dummy.m"; sourceTree = "<group>"; };
+		47021FB5AAB06048B3790BE6A22F9768 /* Pods-TPJsBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPJsBridge.debug.xcconfig"; sourceTree = "<group>"; };
+		4BCF9742BCC82E72925831788CA664A2 /* libTPJsBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTPJsBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F34FC3312E880B56FAEFCF79BC1BF1 /* TPJsBridgeCodeProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsBridgeCodeProvider.m; sourceTree = "<group>"; };
+		5624901379508083D3F79128CA0D576D /* TPJsPluginManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginManager.m; sourceTree = "<group>"; };
+		596A5E7C40FB07FDAA78D426185FA95B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5A47674EBDC107D7019B1094EEED2F8D /* Pods-TPJsBridge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TPJsBridge-acknowledgements.plist"; sourceTree = "<group>"; };
+		625D1B5C4EF52BB348134C87F170E58D /* TPJsPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPlugin.h; sourceTree = "<group>"; };
+		68B1B25B750FB8E1E9B309A954FE78B5 /* TPJsPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPlugin.m; sourceTree = "<group>"; };
+		6B1EAD899B65BA1063EDC7A8273416F7 /* TPJsPlugin_device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPlugin_device.h; sourceTree = "<group>"; };
+		7811188C2AC1364D872DAF87546F1980 /* TPJsPluginResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginResult.m; sourceTree = "<group>"; };
+		7997C42B5AD6E90123ACC25FA063B07E /* TPJsBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPJsBridge-prefix.pch"; sourceTree = "<group>"; };
+		7C5C3375C876A68946EB1A05A8F1E873 /* Pods-TPJsBridge-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPJsBridge-resources.sh"; sourceTree = "<group>"; };
+		7FB00932AE2D26AE595BC2BF031E2AB8 /* Pods-TPJsBridge-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPJsBridge-frameworks.sh"; sourceTree = "<group>"; };
+		8599157224699568D8DE632E92541F18 /* TPJsPluginManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginManager.h; sourceTree = "<group>"; };
+		89FECE16E66CAA10D7AFDAEAE9BE60FC /* TPJsBridgePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgePrivate.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EDFCF1D113EE6FDE2D169823A65C0C0 /* Pods-TPJsBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPJsBridge-dummy.m"; sourceTree = "<group>"; };
+		9FBA2D3E2E02E722CD804897119EB1CA /* TPJsPluginResultEmitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginResultEmitter.h; sourceTree = "<group>"; };
+		A224843471ED7FCE5862A85152435D1D /* TPJsCommandQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsCommandQueue.h; sourceTree = "<group>"; };
+		AB7833AA32009104C9516DEA5ADACE08 /* TPJsConfigParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsConfigParser.h; sourceTree = "<group>"; };
+		AD6343F4FEF122F7A11761D3CBF697BF /* TPJsService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsService.m; sourceTree = "<group>"; };
+		B34A3C8C0900D09E458D85D329C4FB85 /* TPJsBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPJsBridge.xcconfig; sourceTree = "<group>"; };
+		C4F9F447046C5EE157245B6FABB5FD0F /* TPJsConfigParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsConfigParser.m; sourceTree = "<group>"; };
+		D008225EDF95F52F9C83106C78475C41 /* NSString+TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+TPJsBridge.h"; sourceTree = "<group>"; };
+		DD3B20A47076208168EF8DF2DC044EC2 /* TPJsInvokedUrlCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsInvokedUrlCommand.h; sourceTree = "<group>"; };
+		E1F018418016F9D04DB2B2BE33B811C3 /* TPJsBridge.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = TPJsBridge.bundle; sourceTree = "<group>"; };
+		EDDB8272AF7DA52CED82F42852514AD3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		EF0448E2D83F0D89769A90B168A98FF9 /* TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridge.h; sourceTree = "<group>"; };
+		F09566971F342541000DDA13 /* TPJsConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPJsConfiguration.h; sourceTree = "<group>"; };
+		F09566981F342541000DDA13 /* TPJsConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPJsConfiguration.m; sourceTree = "<group>"; };
+		F328FAB76E2A3335345E954DCD8625AB /* TPJsService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsService.h; sourceTree = "<group>"; };
+		F8D0206E0C2B5C99C2A8AA362D50AFBD /* TPJsInvokedUrlCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsInvokedUrlCommand.m; sourceTree = "<group>"; };
+		FEE4CB069E8C6656FF32418818A455BA /* TPJsCommandQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsCommandQueue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33EB48E12A6038D0F191D1E59A1BAAEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A68E17E102E8B0F66CC40EF6626E4C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4966CA9DEC99D5746F0168630829C22A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98DED39324F046403E3A5D0656A92CB1 /* Foundation.framework in Frameworks */,
+				F95240115C5DA4E49E5ECCE934FDBFC5 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A151709FA273E518E2124AA6DE5D0ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FA154E6CA802218AD7817D40CD09E4B /* TPJsBridge */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		38F0299A9E10C3BB370CA96FEE86D511 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40C141A6BBB1A517A556317D978DC60C /* libPods-TPJsBridge.a */,
+				4BCF9742BCC82E72925831788CA664A2 /* libTPJsBridge.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AA345539CE6E62D633A3668D6D46082 /* Pods-TPJsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1D3EC88C363D5FD0DA2F32A8120C734F /* Pods-TPJsBridge-acknowledgements.markdown */,
+				5A47674EBDC107D7019B1094EEED2F8D /* Pods-TPJsBridge-acknowledgements.plist */,
+				9EDFCF1D113EE6FDE2D169823A65C0C0 /* Pods-TPJsBridge-dummy.m */,
+				7FB00932AE2D26AE595BC2BF031E2AB8 /* Pods-TPJsBridge-frameworks.sh */,
+				7C5C3375C876A68946EB1A05A8F1E873 /* Pods-TPJsBridge-resources.sh */,
+				47021FB5AAB06048B3790BE6A22F9768 /* Pods-TPJsBridge.debug.xcconfig */,
+				15D101E7DCC5FE7E4320A6D6063117AE /* Pods-TPJsBridge.release.xcconfig */,
+			);
+			name = "Pods-TPJsBridge";
+			path = "Target Support Files/Pods-TPJsBridge";
+			sourceTree = "<group>";
+		};
+		3ADF00720B338DBB1972A11CC9E9E2D2 /* TPJsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				2A151709FA273E518E2124AA6DE5D0ED /* Resources */,
+				61275A7FC395945AEA6F53ADDD2E2527 /* Support Files */,
+				DE7207F70BA89BF89A56429BD57C6662 /* TPJsBridge */,
+			);
+			name = TPJsBridge;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				729C424472F1E074A2EF30A6BC5F7C43 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61275A7FC395945AEA6F53ADDD2E2527 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B34A3C8C0900D09E458D85D329C4FB85 /* TPJsBridge.xcconfig */,
+				41F2F4F46CE16E4378BBFB24C74355FE /* TPJsBridge-dummy.m */,
+				7997C42B5AD6E90123ACC25FA063B07E /* TPJsBridge-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "DEMO/Pods/Target Support Files/TPJsBridge";
+			sourceTree = "<group>";
+		};
+		729C424472F1E074A2EF30A6BC5F7C43 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				596A5E7C40FB07FDAA78D426185FA95B /* Foundation.framework */,
+				EDDB8272AF7DA52CED82F42852514AD3 /* WebKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7B26A1D3423920234511A49DF4A15374 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ADF00720B338DBB1972A11CC9E9E2D2 /* TPJsBridge */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				7B26A1D3423920234511A49DF4A15374 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				38F0299A9E10C3BB370CA96FEE86D511 /* Products */,
+				E66EF9DC1A777BDF8F048DA17EAD5F2D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		83C6929722DB86D886E8DD959995D63F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3AE003CD8DAF518CA5E5AFC486BAC215 /* NSBundle+TPJsBridge.h */,
+				37D990180376A721D715413E6B24DD5D /* NSBundle+TPJsBridge.m */,
+				D008225EDF95F52F9C83106C78475C41 /* NSString+TPJsBridge.h */,
+				2A3048AAF1444AA385C5B154819FE8F7 /* NSString+TPJsBridge.m */,
+				230C09F4E1855924F7027A753AE7C158 /* TPJsBridgeConst.h */,
+				138F2462104F8A88B8CF201BE907D825 /* TPJsBridgeConst.m */,
+				0D0B5E4C9F7212AD0C2D02897B605B08 /* TPJsBridgeMacro.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8FA154E6CA802218AD7817D40CD09E4B /* TPJsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				E1F018418016F9D04DB2B2BE33B811C3 /* TPJsBridge.bundle */,
+			);
+			path = TPJsBridge;
+			sourceTree = "<group>";
+		};
+		B75D8319FEBA45D548E5FDC7EBB3D85E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F09566971F342541000DDA13 /* TPJsConfiguration.h */,
+				F09566981F342541000DDA13 /* TPJsConfiguration.m */,
+				3A28699EDECD6B7290F8EEF1B64FE0DF /* TPJsBridgeCodeProvider.h */,
+				52F34FC3312E880B56FAEFCF79BC1BF1 /* TPJsBridgeCodeProvider.m */,
+				89FECE16E66CAA10D7AFDAEAE9BE60FC /* TPJsBridgePrivate.h */,
+				A224843471ED7FCE5862A85152435D1D /* TPJsCommandQueue.h */,
+				FEE4CB069E8C6656FF32418818A455BA /* TPJsCommandQueue.m */,
+				AB7833AA32009104C9516DEA5ADACE08 /* TPJsConfigParser.h */,
+				C4F9F447046C5EE157245B6FABB5FD0F /* TPJsConfigParser.m */,
+				DD3B20A47076208168EF8DF2DC044EC2 /* TPJsInvokedUrlCommand.h */,
+				F8D0206E0C2B5C99C2A8AA362D50AFBD /* TPJsInvokedUrlCommand.m */,
+				625D1B5C4EF52BB348134C87F170E58D /* TPJsPlugin.h */,
+				68B1B25B750FB8E1E9B309A954FE78B5 /* TPJsPlugin.m */,
+				05737EB63BF846B30171520F5C48B82E /* TPJsPluginInfo.h */,
+				200B6A432D26470992AE97C909094757 /* TPJsPluginInfo.m */,
+				8599157224699568D8DE632E92541F18 /* TPJsPluginManager.h */,
+				5624901379508083D3F79128CA0D576D /* TPJsPluginManager.m */,
+				40083E8237B5578FC6C059CA5CD0B01E /* TPJsPluginResult.h */,
+				7811188C2AC1364D872DAF87546F1980 /* TPJsPluginResult.m */,
+				9FBA2D3E2E02E722CD804897119EB1CA /* TPJsPluginResultEmitter.h */,
+				09A14DF1854EE86CB896166102F457A1 /* TPJsPluginResultEmitter.m */,
+				F328FAB76E2A3335345E954DCD8625AB /* TPJsService.h */,
+				AD6343F4FEF122F7A11761D3CBF697BF /* TPJsService.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C4826A72906A7B72ED68004761ECAAB3 /* TPJsBridePluginExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B1EAD899B65BA1063EDC7A8273416F7 /* TPJsPlugin_device.h */,
+				17A8789257B2FB5303E8750C4175A6F3 /* TPJsPlugin_device.m */,
+			);
+			path = TPJsBridePluginExtensions;
+			sourceTree = "<group>";
+		};
+		C59FE025F6C5DF26FDA48312EE256B9D /* TPJsBridgeCore */ = {
+			isa = PBXGroup;
+			children = (
+				B75D8319FEBA45D548E5FDC7EBB3D85E /* Components */,
+				83C6929722DB86D886E8DD959995D63F /* Utilities */,
+			);
+			path = TPJsBridgeCore;
+			sourceTree = "<group>";
+		};
+		DE7207F70BA89BF89A56429BD57C6662 /* TPJsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				EF0448E2D83F0D89769A90B168A98FF9 /* TPJsBridge.h */,
+				C4826A72906A7B72ED68004761ECAAB3 /* TPJsBridePluginExtensions */,
+				C59FE025F6C5DF26FDA48312EE256B9D /* TPJsBridgeCore */,
+			);
+			path = TPJsBridge;
+			sourceTree = "<group>";
+		};
+		E66EF9DC1A777BDF8F048DA17EAD5F2D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AA345539CE6E62D633A3668D6D46082 /* Pods-TPJsBridge */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4ED7E9D913E34D7459AC3C4F141AD2BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC2AC5CF7F91F32D73499A21E88737E /* NSBundle+TPJsBridge.h in Headers */,
+				13E7943C2627C45EB1C6520102FA2E89 /* NSString+TPJsBridge.h in Headers */,
+				1D869042F09AAF4483088FDA1A4E309E /* TPJsBridgeCodeProvider.h in Headers */,
+				4326105E454C50A9064D4D9C85AD1BF3 /* TPJsBridgeConst.h in Headers */,
+				957E48C769BD07158264ABB806BEB7BB /* TPJsBridgeMacro.h in Headers */,
+				2F7341F17B9861D10484DE6DCBBADB35 /* TPJsCommandQueue.h in Headers */,
+				6FCC51186A3EF11B680F692367F98315 /* TPJsConfigParser.h in Headers */,
+				3A4B2CB4AD0883407106A482840C0C26 /* TPJsInvokedUrlCommand.h in Headers */,
+				EBD6B5BB2AE9E474E81CCA3BE4C98F49 /* TPJsPlugin.h in Headers */,
+				B2CC31ED97CCC2714C44373935B58B92 /* TPJsPlugin_device.h in Headers */,
+				A417C2D7014F09017DC0D6DD7F8EB89D /* TPJsPluginInfo.h in Headers */,
+				CD00B0F29EE9434F0D9712DA20065A8D /* TPJsPluginManager.h in Headers */,
+				FC62500C2185CFAD29A7452F2C9BA3AE /* TPJsPluginResult.h in Headers */,
+				D7CAF7CCFB0ED4494672BF34449BA823 /* TPJsPluginResultEmitter.h in Headers */,
+				ABE4CFF8E80D8B70A2223E60D9F409D6 /* TPJsService.h in Headers */,
+				F095669B1F3425E4000DDA13 /* TPJsConfiguration.h in Headers */,
+				4C3DFA7B2B2F253E8DA015866EE87121 /* TPJsBridgePrivate.h in Headers */,
+				F01D61651F342BE200A13966 /* TPJsBridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		388A496597635949C91EF0B03D07498E /* TPJsBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F721EC64B293B93F46981E9A92EB1AF /* Build configuration list for PBXNativeTarget "TPJsBridge" */;
+			buildPhases = (
+				84CF8C425231976148735380C5704B3B /* Sources */,
+				4966CA9DEC99D5746F0168630829C22A /* Frameworks */,
+				4ED7E9D913E34D7459AC3C4F141AD2BD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TPJsBridge;
+			productName = TPJsBridge;
+			productReference = 4BCF9742BCC82E72925831788CA664A2 /* libTPJsBridge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4F28B3E10C7EEE85D173B0016AED172B /* Pods-TPJsBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15894E6F6442D8EA8299AFE286F13E86 /* Build configuration list for PBXNativeTarget "Pods-TPJsBridge" */;
+			buildPhases = (
+				CA71BC6961F02363DC9895E848B8DE36 /* Sources */,
+				33EB48E12A6038D0F191D1E59A1BAAEF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42D5B35ECE2D41E78D4C7EA7EDB8CC8F /* PBXTargetDependency */,
+			);
+			name = "Pods-TPJsBridge";
+			productName = "Pods-TPJsBridge";
+			productReference = 40C141A6BBB1A517A556317D978DC60C /* libPods-TPJsBridge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 38F0299A9E10C3BB370CA96FEE86D511 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F28B3E10C7EEE85D173B0016AED172B /* Pods-TPJsBridge */,
+				388A496597635949C91EF0B03D07498E /* TPJsBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84CF8C425231976148735380C5704B3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F095669A1F3425C5000DDA13 /* TPJsConfiguration.m in Sources */,
+				A240D621C534E2678B4C28314D49A0E0 /* NSBundle+TPJsBridge.m in Sources */,
+				4C351B1E3050DCABA526BB3A64CCA1F2 /* NSString+TPJsBridge.m in Sources */,
+				D860EE9563A6E85E2850A7F63B70C186 /* TPJsBridge-dummy.m in Sources */,
+				D29E384A0C036818A2743CADEA5D569A /* TPJsBridgeCodeProvider.m in Sources */,
+				3B8FAFA87EC1397E83613675647E549B /* TPJsBridgeConst.m in Sources */,
+				8B4F23B5C555B121BA19CCDDB24A82BC /* TPJsCommandQueue.m in Sources */,
+				95C6F334CDFC3AA048A151C26BB230A2 /* TPJsConfigParser.m in Sources */,
+				249F5A23A25559A74AD133F348EE7A11 /* TPJsInvokedUrlCommand.m in Sources */,
+				30475C2D2CE3140D4C9971D931B2E6BA /* TPJsPlugin.m in Sources */,
+				6EB3E4C624BDB2C8D933E04E219DECC2 /* TPJsPlugin_device.m in Sources */,
+				360C2ECF67C18A7C2DAEEAE1ABCF54EC /* TPJsPluginInfo.m in Sources */,
+				67B0283E9B6B71485F1DDABB43D9FC2A /* TPJsPluginManager.m in Sources */,
+				AF71346BBB8169ED226339E8B3ADA7B5 /* TPJsPluginResult.m in Sources */,
+				E9E02145B4CCCB16D36A222113F244A7 /* TPJsPluginResultEmitter.m in Sources */,
+				4D9734050A75AB2AB8AA201E8ACC7749 /* TPJsService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA71BC6961F02363DC9895E848B8DE36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F915F744BFA25AD929A2D04848DA12 /* Pods-TPJsBridge-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42D5B35ECE2D41E78D4C7EA7EDB8CC8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TPJsBridge;
+			target = 388A496597635949C91EF0B03D07498E /* TPJsBridge */;
+			targetProxy = 65A96FC250124BC708D24DAEB92960ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D88033408419244A71732DCBEC899DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34A3C8C0900D09E458D85D329C4FB85 /* TPJsBridge.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TPJsBridge/TPJsBridge-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8359A73C837B1204018EC93AEA971CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47021FB5AAB06048B3790BE6A22F9768 /* Pods-TPJsBridge.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C58854BB66B8AD1B56D46E8315ACD93B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15D101E7DCC5FE7E4320A6D6063117AE /* Pods-TPJsBridge.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EC116D5CA887F5DC0CA3923D4FB81269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34A3C8C0900D09E458D85D329C4FB85 /* TPJsBridge.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TPJsBridge/TPJsBridge-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15894E6F6442D8EA8299AFE286F13E86 /* Build configuration list for PBXNativeTarget "Pods-TPJsBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8359A73C837B1204018EC93AEA971CFC /* Debug */,
+				C58854BB66B8AD1B56D46E8315ACD93B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F721EC64B293B93F46981E9A92EB1AF /* Build configuration list for PBXNativeTarget "TPJsBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC116D5CA887F5DC0CA3923D4FB81269 /* Debug */,
+				0D88033408419244A71732DCBEC899DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

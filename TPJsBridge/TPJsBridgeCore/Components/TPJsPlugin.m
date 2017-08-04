@@ -9,13 +9,14 @@
 #import "TPJsPlugin.h"
 #import "TPJsService.h"
 #import "TPJsBridgeConst.h"
+#import "TPJsConfiguration.h"
 
 @interface TPJsPlugin ()
-
+@property (nonatomic, weak) TPJsService *service;
 @end
 
 @implementation TPJsPlugin
-@dynamic isReady, commandDelegate;
+@dynamic isReady, pluginResultEmitter;
 
 - (instancetype)init {
     self = [super init];
@@ -33,8 +34,8 @@
 #pragma mark - notification
 - (void)registerNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(onConnect:)
-                                                 name:kTPJsBridgeDidConnectNotification
+                                             selector:@selector(onConnecting:)
+                                                 name:kTPJsBridgeDidConnectingNotification
                                                object:self.service];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -51,7 +52,7 @@
 
 
 - (void)unregisterNotification {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kTPJsBridgeDidConnectNotification object:self.service];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kTPJsBridgeDidConnectingNotification object:self.service];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kTPJsBridgeDidCloseNotification object:self.service];
     
@@ -72,7 +73,7 @@
     
 }
 
-- (void)onConnect:(NSNotification *)notification {
+- (void)onConnecting:(NSNotification *)notification {
     
 }
 
@@ -84,14 +85,14 @@
     
 }
 
-
-- (id<TPJsCommandDelegate>)commandDelegate {
-    return self.service.commandDelegate;
-}
-
-
 - (BOOL)isReady {
     return self.service.isReady;
 }
+
+
+- (TPJsPluginResultEmitter *)pluginResultEmitter {
+    return self.service.configuration.pluginResultEmitter;
+}
+
 
 @end

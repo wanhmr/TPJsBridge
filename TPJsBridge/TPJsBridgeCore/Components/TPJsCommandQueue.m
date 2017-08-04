@@ -13,6 +13,8 @@
 #import "TPJsPluginManager.h"
 #import "TPJsPlugin.h"
 #import <objc/message.h>
+#import "TPJsConfiguration.h"
+#import "TPJsBridgePrivate.h"
 
 @interface TPJsCommandQueue ()
 @property (nonatomic, weak) TPJsService *service;
@@ -35,17 +37,20 @@
         return;
     }
     
-    __weak typeof(self) weak_self = self;
+    TPJsPluginManager *pluginManager = [self pluginManager];
+    
     [self.operationQueue addOperationWithBlock:^{
-        __strong typeof(weak_self) strong_self = weak_self;
-        TPJsPlugin *plugin = [strong_self.service.pluginManager getPluginWithName:command.pluginName];
-        NSString *realMethodName = [strong_self.service.pluginManager getPluginRealMethodWithName:command.pluginName provideMethodName:command.pluginProvideMethod];
+        TPJsPlugin *plugin = [pluginManager getPluginWithName:command.pluginName];
+        
+        NSString *realMethodName = [pluginManager getPluginRealMethodWithName:command.pluginName provideMethodName:command.pluginProvideMethod];
+        
         SEL selector = NSSelectorFromString([realMethodName stringByAppendingString:@":"]);
         if (selector && [plugin respondsToSelector:selector]) {
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 ((void (*)(id, SEL, id))objc_msgSend)(plugin, selector, command);
             }];
             [[NSOperationQueue mainQueue] waitUntilAllOperationsAreFinished];
+            
         }else {
             TPJsBridgeLog(@"%@ is not suport for %@", command.pluginProvideMethod, command.pluginName);
         }
@@ -53,8 +58,20 @@
 
 }
 
+- (TPJsPluginManager *)pluginManager {
+    return self.service.configuration.pluginManager;
+}
 
-
+- (void)setService:(TPJsService *)service {
+    if (_service == service) {
+        return;
+    }
+    _service = service;
+    
+    for (TPJsPlugin *plugin in [[self pluginManager] getAllPlugins]) {
+        plugin.service = service;
+    }
+}
 
 #pragma mark - lazy
 - (NSOperationQueue *)operationQueue {

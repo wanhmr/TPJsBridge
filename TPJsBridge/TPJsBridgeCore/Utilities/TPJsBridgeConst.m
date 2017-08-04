@@ -12,7 +12,7 @@
 NSString* const kTPJsBridgeSchemeToken = @"#scheme#";
 
 #pragma mark - notification
-NSString* const kTPJsBridgeDidConnectNotification = @"kTPJsBridgeDidConnectNotification";
+NSString* const kTPJsBridgeDidConnectingNotification = @"kTPJsBridgeDidConnectingNotification";
 NSString* const kTPJsBridgeDidCloseNotification = @"kTPJsBridgeDidCloseNotification";
 NSString* const kTPJsBridgeDidReadyNotification = @"kTPJsBridgeDidReadyNotification";
 

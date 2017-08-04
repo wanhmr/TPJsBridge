@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TPJsBridge.h"
+#import "TPJsConfiguration.h"
 
 @interface ViewController () <WKUIDelegate, WKNavigationDelegate>
 @property (nonatomic, strong) TPJsService *service;
@@ -35,7 +36,8 @@
     NSString *configFilePath = [[NSBundle mainBundle] pathForResource:@"TPCustomJsBridgeConfig" ofType:@"json"];
     NSString *apiBuildFilePath = [[NSBundle mainBundle] pathForResource:@"TPCustomJsBridgeApiBuild" ofType:@"js"];
     
-    self.service = [[TPJsService alloc] initWithConfigFilePath:configFilePath apiBuildFilePath:apiBuildFilePath];
+    TPJsConfiguration *configuration = [[TPJsConfiguration alloc] initWithConfigFilePath:configFilePath apiBuildFilePath:apiBuildFilePath];
+    self.service = [[TPJsService alloc] initWithConfiguration:configuration];
     [self.service connect:webView];
     
 }

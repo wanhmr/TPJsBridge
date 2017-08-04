@@ -7,22 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TPJsCommandDelegate.h"
 #import "TPJsInvokedUrlCommand.h"
 #import "TPJsPluginResult.h"
+#import "TPJsPluginResultEmitter.h"
 
 @interface TPJsPlugin : NSObject
-@property (nonatomic, weak) TPJsService *service;
-@property (nonatomic, readonly) id<TPJsCommandDelegate> commandDelegate;
+@property (nonatomic, readonly) TPJsPluginResultEmitter *pluginResultEmitter;
 @property (nonatomic, readonly) BOOL isReady;
 
 - (void)didInitialize NS_REQUIRES_SUPER;
 
 
 /**
- 监听Bridge服务打开
+ 监听Bridge服务连接
  */
-- (void)onConnect:(NSNotification *)notification NS_REQUIRES_SUPER;
+- (void)onConnecting:(NSNotification *)notification NS_REQUIRES_SUPER;
 
 /**
  监听Bridge服务关闭
@@ -30,7 +29,7 @@
 - (void)onClose:(NSNotification *)notification NS_REQUIRES_SUPER;
 
 /**
- 监听Bridge服务已准备好
+ 监听Bridge服务打开
  */
-- (void)onReady:(NSNotification *)notification;
+- (void)onReady:(NSNotification *)notification NS_REQUIRES_SUPER;
 @end

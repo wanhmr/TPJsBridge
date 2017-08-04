@@ -65,7 +65,7 @@
     [self.view addSubview:webView];
     [webView loadRequest:self.request];
     
-    self.service = [TPJsService service];
+    self.service = [TPJsService defaultService];
     [self.service connect:webView];
     
 }
@@ -89,22 +89,13 @@
     if (topViewCtrl.navigationController) {
         [topViewCtrl.navigationController pushViewController:webViewCtrl animated:animated.boolValue];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+            [self.pluginResultEmitter sendPluginResult:result callbackId:command.callbackId];
         });
     }else {
         [topViewCtrl presentViewController:webViewCtrl animated:animated.boolValue completion:^{
-            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+            [self.pluginResultEmitter sendPluginResult:result callbackId:command.callbackId];
         }];
     }
-}
-
-- (void)test:(TPJsInvokedUrlCommand *)command {
-    TPJsPluginResult *result = [TPJsPluginResult resultWithStatus:TPJsCommandResultStatus_OK message:@{@"key" : @"value"}];
-    NSTimer *timer = [NSTimer timerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
-    }];
-    
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 @end

@@ -16,7 +16,6 @@
 @property (nonatomic, copy) NSURL *updateJsBridgeUrl;
 @property (nonatomic, assign, getter=isUpdated) BOOL updated;
 @property (nonatomic, strong) NSLock *lock;
-@property (nonatomic, weak) TPJsService *service;
 @end
 
 @implementation TPJsPluginManager
@@ -26,10 +25,9 @@
     return nil;
 }
 
-- (instancetype)initWithService:(TPJsService *)service plugins:(NSArray<NSDictionary *> *)plugins {
+- (instancetype)initWithPlugins:(NSArray<NSDictionary *> *)plugins {
     self = [super init];
     if (self) {
-        self.service = service;
         [self parsePlugins:plugins];
     }
     return self;
@@ -52,7 +50,6 @@
         NSDictionary *exports = [plugin objectForKey:@"exports"];
         
         TPJsPluginInfo *info = [[TPJsPluginInfo alloc] initWithName:pName class:aClass exports:exports];
-        info.pInstance.service = self.service;
         
         [self.lock lock];
         self.pluginMap[info.pName] = info;
@@ -61,13 +58,18 @@
     
 }
 
+- (NSArray<TPJsPlugin *> *)getAllPlugins {
+    NSUInteger count = self.pluginMap.allKeys.count;
+    NSMutableArray *plugins = [NSMutableArray arrayWithCapacity:count];
+    [self.pluginMap enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, TPJsPluginInfo * _Nonnull obj, BOOL * _Nonnull stop) {
+        [plugins addObject:obj.pInstance];
+    }];
+    return plugins;
+}
 
 - (TPJsPlugin *)getPluginWithName:(NSString *)pName {
     if (!pName || pName.length == 0) return nil;
     TPJsPlugin *plugin = self.pluginMap[pName].pInstance;
-    if (plugin.service != self.service) {
-        plugin.service = self.service;
-    }
     return plugin;
 }
 

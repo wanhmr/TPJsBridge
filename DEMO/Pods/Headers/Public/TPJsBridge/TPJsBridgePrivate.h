@@ -1,0 +1,1 @@
+../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsBridgePrivate.h

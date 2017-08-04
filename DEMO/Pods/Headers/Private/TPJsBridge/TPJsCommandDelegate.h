@@ -1,1 +1,0 @@
-../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsCommandDelegate.h

@@ -7,8 +7,7 @@
 //
 
 #import <WebKit/WebKit.h>
-@class TPJsPluginManager;
-@class TPJsCommandDelegateImpl;
+@class TPJsConfiguration;
 
 typedef NS_ENUM(NSInteger, TPJsServiceStatus) {
     TPJsServiceStatusClosed,
@@ -18,20 +17,18 @@ typedef NS_ENUM(NSInteger, TPJsServiceStatus) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TPJsService : NSObject <WKNavigationDelegate>
+@interface TPJsService : NSObject 
 @property (nonatomic, weak) WKWebView *webView;
-@property (nonatomic, readonly) TPJsPluginManager *pluginManager;
-@property (nonatomic, readonly) TPJsCommandDelegateImpl *commandDelegate;
-@property (nonatomic, readonly) NSString *scheme;
-@property (nonatomic, readonly) NSString *jsBridgeDidReadyEventName;
+@property (nonatomic, strong, readonly) TPJsConfiguration *configuration;
 @property (nonatomic, readonly) TPJsServiceStatus status;
+@property (nonatomic, readonly) NSString *scheme;
 @property (nonatomic, readonly) BOOL isReady;
 
-- (instancetype)initWithConfigFilePath:(NSString * _Nullable)configFilePath apiBuildFilePath:(NSString * _Nullable)apiBuildFilePath;
+- (instancetype)initWithConfiguration:(nullable TPJsConfiguration *)configuration;
 
-+ (instancetype)service;
++ (instancetype)defaultService;
 
-- (void)connect:(WKWebView *)webView;
+- (void)connect:(nonnull WKWebView *)webView;
 
 - (void)close;
 

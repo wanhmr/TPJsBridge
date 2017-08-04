@@ -13,7 +13,7 @@
 
 FOUNDATION_EXTERN NSString* const kTPJsBridgeSchemeToken;
 
-FOUNDATION_EXTERN NSString* const kTPJsBridgeDidConnectNotification;
+FOUNDATION_EXTERN NSString* const kTPJsBridgeDidConnectingNotification;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeDidCloseNotification;
 FOUNDATION_EXTERN NSString* const kTPJsBridgeDidReadyNotification;
 

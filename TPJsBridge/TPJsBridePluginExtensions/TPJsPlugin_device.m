@@ -19,10 +19,7 @@
     [deviceProperties setObject:[device systemVersion] forKey:@"systemVersion"];
     [deviceProperties setObject:[device model] forKey:@"model"];
     
-    TPJsPluginResult *pluginResult = [TPJsPluginResult
-                                      resultWithStatus:TPJsCommandResultStatus_OK
-                                      message:deviceProperties];
     
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    [self.pluginResultEmitter sendPluginResultOKWithMessage:deviceProperties callbackId:command.callbackId];
 }
 @end
