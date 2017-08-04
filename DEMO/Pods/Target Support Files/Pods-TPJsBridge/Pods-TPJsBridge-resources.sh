@@ -80,10 +80,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "../../TPJsBridge/TPJsBridge.bundle"
+  install_resource "../../TPJsBridge/TPJsBridgeResource/TPJsBridge.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "../../TPJsBridge/TPJsBridge.bundle"
+  install_resource "../../TPJsBridge/TPJsBridgeResource/TPJsBridge.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

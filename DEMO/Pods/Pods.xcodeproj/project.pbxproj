@@ -7,44 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EC2AC5CF7F91F32D73499A21E88737E /* NSBundle+TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE003CD8DAF518CA5E5AFC486BAC215 /* NSBundle+TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13E7943C2627C45EB1C6520102FA2E89 /* NSString+TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = D008225EDF95F52F9C83106C78475C41 /* NSString+TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D869042F09AAF4483088FDA1A4E309E /* TPJsBridgeCodeProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A28699EDECD6B7290F8EEF1B64FE0DF /* TPJsBridgeCodeProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		249F5A23A25559A74AD133F348EE7A11 /* TPJsInvokedUrlCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D0206E0C2B5C99C2A8AA362D50AFBD /* TPJsInvokedUrlCommand.m */; };
+		0EC2AC5CF7F91F32D73499A21E88737E /* NSBundle+TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4B48CCE58A7FA274BD4E3E16238E13 /* NSBundle+TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13E7943C2627C45EB1C6520102FA2E89 /* NSString+TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = FE454AA9DA6ABC60C1323CE274B86024 /* NSString+TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D869042F09AAF4483088FDA1A4E309E /* TPJsBridgeCodeProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 67DC802238B634CD5C473727D7D98EA3 /* TPJsBridgeCodeProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		249F5A23A25559A74AD133F348EE7A11 /* TPJsInvokedUrlCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = ED90FFF125ACCEC1008BDCCB7B5C7023 /* TPJsInvokedUrlCommand.m */; };
 		27A68E17E102E8B0F66CC40EF6626E4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596A5E7C40FB07FDAA78D426185FA95B /* Foundation.framework */; };
-		2F7341F17B9861D10484DE6DCBBADB35 /* TPJsCommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A224843471ED7FCE5862A85152435D1D /* TPJsCommandQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30475C2D2CE3140D4C9971D931B2E6BA /* TPJsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B1B25B750FB8E1E9B309A954FE78B5 /* TPJsPlugin.m */; };
-		360C2ECF67C18A7C2DAEEAE1ABCF54EC /* TPJsPluginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 200B6A432D26470992AE97C909094757 /* TPJsPluginInfo.m */; };
-		3A4B2CB4AD0883407106A482840C0C26 /* TPJsInvokedUrlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3B20A47076208168EF8DF2DC044EC2 /* TPJsInvokedUrlCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B8FAFA87EC1397E83613675647E549B /* TPJsBridgeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F2462104F8A88B8CF201BE907D825 /* TPJsBridgeConst.m */; };
+		2F7341F17B9861D10484DE6DCBBADB35 /* TPJsCommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = E66E0307F0B9379912A667271A592EF2 /* TPJsCommandQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30475C2D2CE3140D4C9971D931B2E6BA /* TPJsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A3D6C5765F403A37C07C42E7213619 /* TPJsPlugin.m */; };
+		360C2ECF67C18A7C2DAEEAE1ABCF54EC /* TPJsPluginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 558F83CF3953DA6F4CBC0B47DE4DF8A5 /* TPJsPluginInfo.m */; };
+		3A4B2CB4AD0883407106A482840C0C26 /* TPJsInvokedUrlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 94AEE7E504DF5E00B07232CEDF95A526 /* TPJsInvokedUrlCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B8FAFA87EC1397E83613675647E549B /* TPJsBridgeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E95E28CFB449DF7F1A390077F5509AAF /* TPJsBridgeConst.m */; };
 		42F915F744BFA25AD929A2D04848DA12 /* Pods-TPJsBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFCF1D113EE6FDE2D169823A65C0C0 /* Pods-TPJsBridge-dummy.m */; };
-		4326105E454C50A9064D4D9C85AD1BF3 /* TPJsBridgeConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 230C09F4E1855924F7027A753AE7C158 /* TPJsBridgeConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C351B1E3050DCABA526BB3A64CCA1F2 /* NSString+TPJsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3048AAF1444AA385C5B154819FE8F7 /* NSString+TPJsBridge.m */; };
-		4C3DFA7B2B2F253E8DA015866EE87121 /* TPJsBridgePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 89FECE16E66CAA10D7AFDAEAE9BE60FC /* TPJsBridgePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D9734050A75AB2AB8AA201E8ACC7749 /* TPJsService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6343F4FEF122F7A11761D3CBF697BF /* TPJsService.m */; };
-		67B0283E9B6B71485F1DDABB43D9FC2A /* TPJsPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5624901379508083D3F79128CA0D576D /* TPJsPluginManager.m */; };
-		6EB3E4C624BDB2C8D933E04E219DECC2 /* TPJsPlugin_device.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8789257B2FB5303E8750C4175A6F3 /* TPJsPlugin_device.m */; };
-		6FCC51186A3EF11B680F692367F98315 /* TPJsConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AB7833AA32009104C9516DEA5ADACE08 /* TPJsConfigParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B4F23B5C555B121BA19CCDDB24A82BC /* TPJsCommandQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE4CB069E8C6656FF32418818A455BA /* TPJsCommandQueue.m */; };
-		957E48C769BD07158264ABB806BEB7BB /* TPJsBridgeMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D0B5E4C9F7212AD0C2D02897B605B08 /* TPJsBridgeMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95C6F334CDFC3AA048A151C26BB230A2 /* TPJsConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F9F447046C5EE157245B6FABB5FD0F /* TPJsConfigParser.m */; };
+		4326105E454C50A9064D4D9C85AD1BF3 /* TPJsBridgeConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B29646EFC0FC3CA36986A7A0AFC4A8 /* TPJsBridgeConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C351B1E3050DCABA526BB3A64CCA1F2 /* NSString+TPJsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142BF893587070B48A3F7A852E2C82E /* NSString+TPJsBridge.m */; };
+		4C3DFA7B2B2F253E8DA015866EE87121 /* TPJsBridgePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC10E8ED144274D0ADF1580B94AFF7A /* TPJsBridgePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D9734050A75AB2AB8AA201E8ACC7749 /* TPJsService.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9DE1A4E253419A07DC2C9C0062230A /* TPJsService.m */; };
+		67B0283E9B6B71485F1DDABB43D9FC2A /* TPJsPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA19E3E349AEA9A36ED05146D1A46 /* TPJsPluginManager.m */; };
+		6EB3E4C624BDB2C8D933E04E219DECC2 /* TPJsPlugin_device.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDA94411A520DC674B751D2A40690E6 /* TPJsPlugin_device.m */; };
+		6FCC51186A3EF11B680F692367F98315 /* TPJsConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 934D4FA71234E8934DAF1F7F810D1A11 /* TPJsConfigParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		790C3ADD9860C480DDDC18863263EA28 /* TPJsConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = A3B3F1CDF06072A77C7CB49EF8F67F91 /* TPJsConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B4F23B5C555B121BA19CCDDB24A82BC /* TPJsCommandQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 179A79C78D0A3AD4A14D2ECA00430669 /* TPJsCommandQueue.m */; };
+		957E48C769BD07158264ABB806BEB7BB /* TPJsBridgeMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = EB265A988E1236307B56086F2FD8342E /* TPJsBridgeMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95C6F334CDFC3AA048A151C26BB230A2 /* TPJsConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B8513E2EE598A57A15388141E213CEED /* TPJsConfigParser.m */; };
 		98DED39324F046403E3A5D0656A92CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596A5E7C40FB07FDAA78D426185FA95B /* Foundation.framework */; };
-		A240D621C534E2678B4C28314D49A0E0 /* NSBundle+TPJsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D990180376A721D715413E6B24DD5D /* NSBundle+TPJsBridge.m */; };
-		A417C2D7014F09017DC0D6DD7F8EB89D /* TPJsPluginInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 05737EB63BF846B30171520F5C48B82E /* TPJsPluginInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABE4CFF8E80D8B70A2223E60D9F409D6 /* TPJsService.h in Headers */ = {isa = PBXBuildFile; fileRef = F328FAB76E2A3335345E954DCD8625AB /* TPJsService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF71346BBB8169ED226339E8B3ADA7B5 /* TPJsPluginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7811188C2AC1364D872DAF87546F1980 /* TPJsPluginResult.m */; };
-		B2CC31ED97CCC2714C44373935B58B92 /* TPJsPlugin_device.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1EAD899B65BA1063EDC7A8273416F7 /* TPJsPlugin_device.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD00B0F29EE9434F0D9712DA20065A8D /* TPJsPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8599157224699568D8DE632E92541F18 /* TPJsPluginManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D29E384A0C036818A2743CADEA5D569A /* TPJsBridgeCodeProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F34FC3312E880B56FAEFCF79BC1BF1 /* TPJsBridgeCodeProvider.m */; };
-		D7CAF7CCFB0ED4494672BF34449BA823 /* TPJsPluginResultEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBA2D3E2E02E722CD804897119EB1CA /* TPJsPluginResultEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A240D621C534E2678B4C28314D49A0E0 /* NSBundle+TPJsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = AF17BF11E926A1A89E25D299E1ACA0B0 /* NSBundle+TPJsBridge.m */; };
+		A417C2D7014F09017DC0D6DD7F8EB89D /* TPJsPluginInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 713E025F7BB4CAE76F1709CD891B5BC0 /* TPJsPluginInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABE4CFF8E80D8B70A2223E60D9F409D6 /* TPJsService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3737DA0A3B50883129C1F0DD77EFA5C4 /* TPJsService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF71346BBB8169ED226339E8B3ADA7B5 /* TPJsPluginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A045E964DFD32F42A0A41D83AB29C83 /* TPJsPluginResult.m */; };
+		B2CC31ED97CCC2714C44373935B58B92 /* TPJsPlugin_device.h in Headers */ = {isa = PBXBuildFile; fileRef = 98E25A6B14A0E2573159197A0EE072F7 /* TPJsPlugin_device.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD00B0F29EE9434F0D9712DA20065A8D /* TPJsPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C19D325C85FE5477252311C08FB6D0E /* TPJsPluginManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D29E384A0C036818A2743CADEA5D569A /* TPJsBridgeCodeProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 53083DBFD6632D724DC7CF577A284613 /* TPJsBridgeCodeProvider.m */; };
+		D7CAF7CCFB0ED4494672BF34449BA823 /* TPJsPluginResultEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CAD0C5C4B6106719107B86AF76F2DCC /* TPJsPluginResultEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D860EE9563A6E85E2850A7F63B70C186 /* TPJsBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F2F4F46CE16E4378BBFB24C74355FE /* TPJsBridge-dummy.m */; };
-		E9E02145B4CCCB16D36A222113F244A7 /* TPJsPluginResultEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A14DF1854EE86CB896166102F457A1 /* TPJsPluginResultEmitter.m */; };
-		EBD6B5BB2AE9E474E81CCA3BE4C98F49 /* TPJsPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 625D1B5C4EF52BB348134C87F170E58D /* TPJsPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F01D61651F342BE200A13966 /* TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0448E2D83F0D89769A90B168A98FF9 /* TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F095669A1F3425C5000DDA13 /* TPJsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F09566981F342541000DDA13 /* TPJsConfiguration.m */; };
-		F095669B1F3425E4000DDA13 /* TPJsConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = F09566971F342541000DDA13 /* TPJsConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9E02145B4CCCB16D36A222113F244A7 /* TPJsPluginResultEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C4AC944616D70C1B38606C14761282 /* TPJsPluginResultEmitter.m */; };
+		EB2D83D464644F02D570C8A23D9C91A6 /* TPJsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = AED1E1BD9077E7933550CEAD49CF2C39 /* TPJsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBD6B5BB2AE9E474E81CCA3BE4C98F49 /* TPJsPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F02AFA0818707DBEBAC24E300C5919F /* TPJsPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0F8F9B983460548AFCB071886F5C6BD /* TPJsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7528167CB447F1089BBD0D6D9FA36241 /* TPJsConfiguration.m */; };
 		F95240115C5DA4E49E5ECCE934FDBFC5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDB8272AF7DA52CED82F42852514AD3 /* WebKit.framework */; };
-		FC62500C2185CFAD29A7452F2C9BA3AE /* TPJsPluginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 40083E8237B5578FC6C059CA5CD0B01E /* TPJsPluginResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC62500C2185CFAD29A7452F2C9BA3AE /* TPJsPluginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A11D9261B687204900700014AF13CE /* TPJsPluginResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,55 +58,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05737EB63BF846B30171520F5C48B82E /* TPJsPluginInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginInfo.h; sourceTree = "<group>"; };
-		09A14DF1854EE86CB896166102F457A1 /* TPJsPluginResultEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginResultEmitter.m; sourceTree = "<group>"; };
-		0D0B5E4C9F7212AD0C2D02897B605B08 /* TPJsBridgeMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeMacro.h; sourceTree = "<group>"; };
-		138F2462104F8A88B8CF201BE907D825 /* TPJsBridgeConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsBridgeConst.m; sourceTree = "<group>"; };
+		0C19D325C85FE5477252311C08FB6D0E /* TPJsPluginManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginManager.h; sourceTree = "<group>"; };
 		15D101E7DCC5FE7E4320A6D6063117AE /* Pods-TPJsBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPJsBridge.release.xcconfig"; sourceTree = "<group>"; };
-		17A8789257B2FB5303E8750C4175A6F3 /* TPJsPlugin_device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPlugin_device.m; sourceTree = "<group>"; };
+		179A79C78D0A3AD4A14D2ECA00430669 /* TPJsCommandQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsCommandQueue.m; sourceTree = "<group>"; };
+		1A045E964DFD32F42A0A41D83AB29C83 /* TPJsPluginResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginResult.m; sourceTree = "<group>"; };
 		1D3EC88C363D5FD0DA2F32A8120C734F /* Pods-TPJsBridge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TPJsBridge-acknowledgements.markdown"; sourceTree = "<group>"; };
-		200B6A432D26470992AE97C909094757 /* TPJsPluginInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginInfo.m; sourceTree = "<group>"; };
-		230C09F4E1855924F7027A753AE7C158 /* TPJsBridgeConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeConst.h; sourceTree = "<group>"; };
-		2A3048AAF1444AA385C5B154819FE8F7 /* NSString+TPJsBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+TPJsBridge.m"; sourceTree = "<group>"; };
-		37D990180376A721D715413E6B24DD5D /* NSBundle+TPJsBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TPJsBridge.m"; sourceTree = "<group>"; };
-		3A28699EDECD6B7290F8EEF1B64FE0DF /* TPJsBridgeCodeProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeCodeProvider.h; sourceTree = "<group>"; };
-		3AE003CD8DAF518CA5E5AFC486BAC215 /* NSBundle+TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TPJsBridge.h"; sourceTree = "<group>"; };
-		40083E8237B5578FC6C059CA5CD0B01E /* TPJsPluginResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginResult.h; sourceTree = "<group>"; };
-		40C141A6BBB1A517A556317D978DC60C /* libPods-TPJsBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPJsBridge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F02AFA0818707DBEBAC24E300C5919F /* TPJsPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPlugin.h; sourceTree = "<group>"; };
+		2DC10E8ED144274D0ADF1580B94AFF7A /* TPJsBridgePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgePrivate.h; sourceTree = "<group>"; };
+		3737DA0A3B50883129C1F0DD77EFA5C4 /* TPJsService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsService.h; sourceTree = "<group>"; };
+		40C141A6BBB1A517A556317D978DC60C /* libPods-TPJsBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TPJsBridge.a"; path = "libPods-TPJsBridge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F2F4F46CE16E4378BBFB24C74355FE /* TPJsBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPJsBridge-dummy.m"; sourceTree = "<group>"; };
 		47021FB5AAB06048B3790BE6A22F9768 /* Pods-TPJsBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPJsBridge.debug.xcconfig"; sourceTree = "<group>"; };
-		4BCF9742BCC82E72925831788CA664A2 /* libTPJsBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTPJsBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		52F34FC3312E880B56FAEFCF79BC1BF1 /* TPJsBridgeCodeProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsBridgeCodeProvider.m; sourceTree = "<group>"; };
-		5624901379508083D3F79128CA0D576D /* TPJsPluginManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginManager.m; sourceTree = "<group>"; };
+		4BCF9742BCC82E72925831788CA664A2 /* libTPJsBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTPJsBridge.a; path = libTPJsBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5142BF893587070B48A3F7A852E2C82E /* NSString+TPJsBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+TPJsBridge.m"; sourceTree = "<group>"; };
+		53083DBFD6632D724DC7CF577A284613 /* TPJsBridgeCodeProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsBridgeCodeProvider.m; sourceTree = "<group>"; };
+		558F83CF3953DA6F4CBC0B47DE4DF8A5 /* TPJsPluginInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginInfo.m; sourceTree = "<group>"; };
+		55A11D9261B687204900700014AF13CE /* TPJsPluginResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginResult.h; sourceTree = "<group>"; };
 		596A5E7C40FB07FDAA78D426185FA95B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5A47674EBDC107D7019B1094EEED2F8D /* Pods-TPJsBridge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TPJsBridge-acknowledgements.plist"; sourceTree = "<group>"; };
-		625D1B5C4EF52BB348134C87F170E58D /* TPJsPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPlugin.h; sourceTree = "<group>"; };
-		68B1B25B750FB8E1E9B309A954FE78B5 /* TPJsPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPlugin.m; sourceTree = "<group>"; };
-		6B1EAD899B65BA1063EDC7A8273416F7 /* TPJsPlugin_device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPlugin_device.h; sourceTree = "<group>"; };
-		7811188C2AC1364D872DAF87546F1980 /* TPJsPluginResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginResult.m; sourceTree = "<group>"; };
+		5CAD0C5C4B6106719107B86AF76F2DCC /* TPJsPluginResultEmitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginResultEmitter.h; sourceTree = "<group>"; };
+		63C4AC944616D70C1B38606C14761282 /* TPJsPluginResultEmitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginResultEmitter.m; sourceTree = "<group>"; };
+		66A3D6C5765F403A37C07C42E7213619 /* TPJsPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPlugin.m; sourceTree = "<group>"; };
+		67DC802238B634CD5C473727D7D98EA3 /* TPJsBridgeCodeProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeCodeProvider.h; sourceTree = "<group>"; };
+		70B29646EFC0FC3CA36986A7A0AFC4A8 /* TPJsBridgeConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeConst.h; sourceTree = "<group>"; };
+		713E025F7BB4CAE76F1709CD891B5BC0 /* TPJsPluginInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginInfo.h; sourceTree = "<group>"; };
+		7528167CB447F1089BBD0D6D9FA36241 /* TPJsConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsConfiguration.m; sourceTree = "<group>"; };
 		7997C42B5AD6E90123ACC25FA063B07E /* TPJsBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPJsBridge-prefix.pch"; sourceTree = "<group>"; };
 		7C5C3375C876A68946EB1A05A8F1E873 /* Pods-TPJsBridge-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPJsBridge-resources.sh"; sourceTree = "<group>"; };
+		7EBAA19E3E349AEA9A36ED05146D1A46 /* TPJsPluginManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPluginManager.m; sourceTree = "<group>"; };
 		7FB00932AE2D26AE595BC2BF031E2AB8 /* Pods-TPJsBridge-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TPJsBridge-frameworks.sh"; sourceTree = "<group>"; };
-		8599157224699568D8DE632E92541F18 /* TPJsPluginManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginManager.h; sourceTree = "<group>"; };
-		89FECE16E66CAA10D7AFDAEAE9BE60FC /* TPJsBridgePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgePrivate.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8B4B48CCE58A7FA274BD4E3E16238E13 /* NSBundle+TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TPJsBridge.h"; sourceTree = "<group>"; };
+		934D4FA71234E8934DAF1F7F810D1A11 /* TPJsConfigParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsConfigParser.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94AEE7E504DF5E00B07232CEDF95A526 /* TPJsInvokedUrlCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsInvokedUrlCommand.h; sourceTree = "<group>"; };
+		98E25A6B14A0E2573159197A0EE072F7 /* TPJsPlugin_device.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPlugin_device.h; sourceTree = "<group>"; };
+		9B8C02ACAA3392DDFED6B8DC494C64E4 /* TPJsBridge.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = TPJsBridge.bundle; sourceTree = "<group>"; };
 		9EDFCF1D113EE6FDE2D169823A65C0C0 /* Pods-TPJsBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPJsBridge-dummy.m"; sourceTree = "<group>"; };
-		9FBA2D3E2E02E722CD804897119EB1CA /* TPJsPluginResultEmitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsPluginResultEmitter.h; sourceTree = "<group>"; };
-		A224843471ED7FCE5862A85152435D1D /* TPJsCommandQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsCommandQueue.h; sourceTree = "<group>"; };
-		AB7833AA32009104C9516DEA5ADACE08 /* TPJsConfigParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsConfigParser.h; sourceTree = "<group>"; };
-		AD6343F4FEF122F7A11761D3CBF697BF /* TPJsService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsService.m; sourceTree = "<group>"; };
+		A3B3F1CDF06072A77C7CB49EF8F67F91 /* TPJsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsConfiguration.h; sourceTree = "<group>"; };
+		AED1E1BD9077E7933550CEAD49CF2C39 /* TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridge.h; sourceTree = "<group>"; };
+		AF17BF11E926A1A89E25D299E1ACA0B0 /* NSBundle+TPJsBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TPJsBridge.m"; sourceTree = "<group>"; };
 		B34A3C8C0900D09E458D85D329C4FB85 /* TPJsBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPJsBridge.xcconfig; sourceTree = "<group>"; };
-		C4F9F447046C5EE157245B6FABB5FD0F /* TPJsConfigParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsConfigParser.m; sourceTree = "<group>"; };
-		D008225EDF95F52F9C83106C78475C41 /* NSString+TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+TPJsBridge.h"; sourceTree = "<group>"; };
-		DD3B20A47076208168EF8DF2DC044EC2 /* TPJsInvokedUrlCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsInvokedUrlCommand.h; sourceTree = "<group>"; };
-		E1F018418016F9D04DB2B2BE33B811C3 /* TPJsBridge.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = TPJsBridge.bundle; sourceTree = "<group>"; };
+		B8513E2EE598A57A15388141E213CEED /* TPJsConfigParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsConfigParser.m; sourceTree = "<group>"; };
+		BE9DE1A4E253419A07DC2C9C0062230A /* TPJsService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsService.m; sourceTree = "<group>"; };
+		CFDA94411A520DC674B751D2A40690E6 /* TPJsPlugin_device.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsPlugin_device.m; sourceTree = "<group>"; };
+		E66E0307F0B9379912A667271A592EF2 /* TPJsCommandQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsCommandQueue.h; sourceTree = "<group>"; };
+		E95E28CFB449DF7F1A390077F5509AAF /* TPJsBridgeConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsBridgeConst.m; sourceTree = "<group>"; };
+		EB265A988E1236307B56086F2FD8342E /* TPJsBridgeMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridgeMacro.h; sourceTree = "<group>"; };
+		ED90FFF125ACCEC1008BDCCB7B5C7023 /* TPJsInvokedUrlCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsInvokedUrlCommand.m; sourceTree = "<group>"; };
 		EDDB8272AF7DA52CED82F42852514AD3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		EF0448E2D83F0D89769A90B168A98FF9 /* TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsBridge.h; sourceTree = "<group>"; };
-		F09566971F342541000DDA13 /* TPJsConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPJsConfiguration.h; sourceTree = "<group>"; };
-		F09566981F342541000DDA13 /* TPJsConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPJsConfiguration.m; sourceTree = "<group>"; };
-		F328FAB76E2A3335345E954DCD8625AB /* TPJsService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPJsService.h; sourceTree = "<group>"; };
-		F8D0206E0C2B5C99C2A8AA362D50AFBD /* TPJsInvokedUrlCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsInvokedUrlCommand.m; sourceTree = "<group>"; };
-		FEE4CB069E8C6656FF32418818A455BA /* TPJsCommandQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TPJsCommandQueue.m; sourceTree = "<group>"; };
+		FE454AA9DA6ABC60C1323CE274B86024 /* NSString+TPJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+TPJsBridge.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,12 +130,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BE1CF804C090CCF33B0359434AFC5DD /* TPJsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				F2857078B7C6B7821894C27CB63524F6 /* TPJsBridgeResource */,
+			);
+			name = TPJsBridge;
+			path = TPJsBridge;
+			sourceTree = "<group>";
+		};
 		2A151709FA273E518E2124AA6DE5D0ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8FA154E6CA802218AD7817D40CD09E4B /* TPJsBridge */,
+				0BE1CF804C090CCF33B0359434AFC5DD /* TPJsBridge */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		37305AFED2D3BA0A2F1D5FED696DDCEF /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				2DC10E8ED144274D0ADF1580B94AFF7A /* TPJsBridgePrivate.h */,
+			);
+			name = Private;
+			path = Private;
 			sourceTree = "<group>";
 		};
 		38F0299A9E10C3BB370CA96FEE86D511 /* Products */ = {
@@ -167,7 +185,7 @@
 			children = (
 				2A151709FA273E518E2124AA6DE5D0ED /* Resources */,
 				61275A7FC395945AEA6F53ADDD2E2527 /* Support Files */,
-				DE7207F70BA89BF89A56429BD57C6662 /* TPJsBridge */,
+				FA2CF52D9D9176D6B30D7CAF8D072F8A /* TPJsBridge */,
 			);
 			name = TPJsBridge;
 			path = ../..;
@@ -220,84 +238,59 @@
 			);
 			sourceTree = "<group>";
 		};
-		83C6929722DB86D886E8DD959995D63F /* Utilities */ = {
+		94626100443EAE6EF84C0C54A072AE4A /* TPJsBridgePluginExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				3AE003CD8DAF518CA5E5AFC486BAC215 /* NSBundle+TPJsBridge.h */,
-				37D990180376A721D715413E6B24DD5D /* NSBundle+TPJsBridge.m */,
-				D008225EDF95F52F9C83106C78475C41 /* NSString+TPJsBridge.h */,
-				2A3048AAF1444AA385C5B154819FE8F7 /* NSString+TPJsBridge.m */,
-				230C09F4E1855924F7027A753AE7C158 /* TPJsBridgeConst.h */,
-				138F2462104F8A88B8CF201BE907D825 /* TPJsBridgeConst.m */,
-				0D0B5E4C9F7212AD0C2D02897B605B08 /* TPJsBridgeMacro.h */,
+				98E25A6B14A0E2573159197A0EE072F7 /* TPJsPlugin_device.h */,
+				CFDA94411A520DC674B751D2A40690E6 /* TPJsPlugin_device.m */,
 			);
-			path = Utilities;
+			name = TPJsBridgePluginExtensions;
+			path = TPJsBridgePluginExtensions;
 			sourceTree = "<group>";
 		};
-		8FA154E6CA802218AD7817D40CD09E4B /* TPJsBridge */ = {
+		AC465C530DB50F49AA1AE8698A808DD4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E1F018418016F9D04DB2B2BE33B811C3 /* TPJsBridge.bundle */,
+				67DC802238B634CD5C473727D7D98EA3 /* TPJsBridgeCodeProvider.h */,
+				53083DBFD6632D724DC7CF577A284613 /* TPJsBridgeCodeProvider.m */,
+				E66E0307F0B9379912A667271A592EF2 /* TPJsCommandQueue.h */,
+				179A79C78D0A3AD4A14D2ECA00430669 /* TPJsCommandQueue.m */,
+				934D4FA71234E8934DAF1F7F810D1A11 /* TPJsConfigParser.h */,
+				B8513E2EE598A57A15388141E213CEED /* TPJsConfigParser.m */,
+				A3B3F1CDF06072A77C7CB49EF8F67F91 /* TPJsConfiguration.h */,
+				7528167CB447F1089BBD0D6D9FA36241 /* TPJsConfiguration.m */,
+				94AEE7E504DF5E00B07232CEDF95A526 /* TPJsInvokedUrlCommand.h */,
+				ED90FFF125ACCEC1008BDCCB7B5C7023 /* TPJsInvokedUrlCommand.m */,
+				1F02AFA0818707DBEBAC24E300C5919F /* TPJsPlugin.h */,
+				66A3D6C5765F403A37C07C42E7213619 /* TPJsPlugin.m */,
+				713E025F7BB4CAE76F1709CD891B5BC0 /* TPJsPluginInfo.h */,
+				558F83CF3953DA6F4CBC0B47DE4DF8A5 /* TPJsPluginInfo.m */,
+				0C19D325C85FE5477252311C08FB6D0E /* TPJsPluginManager.h */,
+				7EBAA19E3E349AEA9A36ED05146D1A46 /* TPJsPluginManager.m */,
+				55A11D9261B687204900700014AF13CE /* TPJsPluginResult.h */,
+				1A045E964DFD32F42A0A41D83AB29C83 /* TPJsPluginResult.m */,
+				5CAD0C5C4B6106719107B86AF76F2DCC /* TPJsPluginResultEmitter.h */,
+				63C4AC944616D70C1B38606C14761282 /* TPJsPluginResultEmitter.m */,
+				3737DA0A3B50883129C1F0DD77EFA5C4 /* TPJsService.h */,
+				BE9DE1A4E253419A07DC2C9C0062230A /* TPJsService.m */,
 			);
-			path = TPJsBridge;
-			sourceTree = "<group>";
-		};
-		B75D8319FEBA45D548E5FDC7EBB3D85E /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				F09566971F342541000DDA13 /* TPJsConfiguration.h */,
-				F09566981F342541000DDA13 /* TPJsConfiguration.m */,
-				3A28699EDECD6B7290F8EEF1B64FE0DF /* TPJsBridgeCodeProvider.h */,
-				52F34FC3312E880B56FAEFCF79BC1BF1 /* TPJsBridgeCodeProvider.m */,
-				89FECE16E66CAA10D7AFDAEAE9BE60FC /* TPJsBridgePrivate.h */,
-				A224843471ED7FCE5862A85152435D1D /* TPJsCommandQueue.h */,
-				FEE4CB069E8C6656FF32418818A455BA /* TPJsCommandQueue.m */,
-				AB7833AA32009104C9516DEA5ADACE08 /* TPJsConfigParser.h */,
-				C4F9F447046C5EE157245B6FABB5FD0F /* TPJsConfigParser.m */,
-				DD3B20A47076208168EF8DF2DC044EC2 /* TPJsInvokedUrlCommand.h */,
-				F8D0206E0C2B5C99C2A8AA362D50AFBD /* TPJsInvokedUrlCommand.m */,
-				625D1B5C4EF52BB348134C87F170E58D /* TPJsPlugin.h */,
-				68B1B25B750FB8E1E9B309A954FE78B5 /* TPJsPlugin.m */,
-				05737EB63BF846B30171520F5C48B82E /* TPJsPluginInfo.h */,
-				200B6A432D26470992AE97C909094757 /* TPJsPluginInfo.m */,
-				8599157224699568D8DE632E92541F18 /* TPJsPluginManager.h */,
-				5624901379508083D3F79128CA0D576D /* TPJsPluginManager.m */,
-				40083E8237B5578FC6C059CA5CD0B01E /* TPJsPluginResult.h */,
-				7811188C2AC1364D872DAF87546F1980 /* TPJsPluginResult.m */,
-				9FBA2D3E2E02E722CD804897119EB1CA /* TPJsPluginResultEmitter.h */,
-				09A14DF1854EE86CB896166102F457A1 /* TPJsPluginResultEmitter.m */,
-				F328FAB76E2A3335345E954DCD8625AB /* TPJsService.h */,
-				AD6343F4FEF122F7A11761D3CBF697BF /* TPJsService.m */,
-			);
+			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
-		C4826A72906A7B72ED68004761ECAAB3 /* TPJsBridePluginExtensions */ = {
+		B99946F7F7502CC1B717CAA6F88AD062 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6B1EAD899B65BA1063EDC7A8273416F7 /* TPJsPlugin_device.h */,
-				17A8789257B2FB5303E8750C4175A6F3 /* TPJsPlugin_device.m */,
+				8B4B48CCE58A7FA274BD4E3E16238E13 /* NSBundle+TPJsBridge.h */,
+				AF17BF11E926A1A89E25D299E1ACA0B0 /* NSBundle+TPJsBridge.m */,
+				FE454AA9DA6ABC60C1323CE274B86024 /* NSString+TPJsBridge.h */,
+				5142BF893587070B48A3F7A852E2C82E /* NSString+TPJsBridge.m */,
+				70B29646EFC0FC3CA36986A7A0AFC4A8 /* TPJsBridgeConst.h */,
+				E95E28CFB449DF7F1A390077F5509AAF /* TPJsBridgeConst.m */,
+				EB265A988E1236307B56086F2FD8342E /* TPJsBridgeMacro.h */,
 			);
-			path = TPJsBridePluginExtensions;
-			sourceTree = "<group>";
-		};
-		C59FE025F6C5DF26FDA48312EE256B9D /* TPJsBridgeCore */ = {
-			isa = PBXGroup;
-			children = (
-				B75D8319FEBA45D548E5FDC7EBB3D85E /* Components */,
-				83C6929722DB86D886E8DD959995D63F /* Utilities */,
-			);
-			path = TPJsBridgeCore;
-			sourceTree = "<group>";
-		};
-		DE7207F70BA89BF89A56429BD57C6662 /* TPJsBridge */ = {
-			isa = PBXGroup;
-			children = (
-				EF0448E2D83F0D89769A90B168A98FF9 /* TPJsBridge.h */,
-				C4826A72906A7B72ED68004761ECAAB3 /* TPJsBridePluginExtensions */,
-				C59FE025F6C5DF26FDA48312EE256B9D /* TPJsBridgeCore */,
-			);
-			path = TPJsBridge;
+			name = Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		E66EF9DC1A777BDF8F048DA17EAD5F2D /* Targets Support Files */ = {
@@ -306,6 +299,37 @@
 				3AA345539CE6E62D633A3668D6D46082 /* Pods-TPJsBridge */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F2857078B7C6B7821894C27CB63524F6 /* TPJsBridgeResource */ = {
+			isa = PBXGroup;
+			children = (
+				9B8C02ACAA3392DDFED6B8DC494C64E4 /* TPJsBridge.bundle */,
+			);
+			name = TPJsBridgeResource;
+			path = TPJsBridgeResource;
+			sourceTree = "<group>";
+		};
+		FA2CF52D9D9176D6B30D7CAF8D072F8A /* TPJsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				AED1E1BD9077E7933550CEAD49CF2C39 /* TPJsBridge.h */,
+				FFB29672899B0CDC6690AE9D5869395A /* TPJsBridgeCore */,
+				94626100443EAE6EF84C0C54A072AE4A /* TPJsBridgePluginExtensions */,
+			);
+			name = TPJsBridge;
+			path = TPJsBridge;
+			sourceTree = "<group>";
+		};
+		FFB29672899B0CDC6690AE9D5869395A /* TPJsBridgeCore */ = {
+			isa = PBXGroup;
+			children = (
+				AC465C530DB50F49AA1AE8698A808DD4 /* Components */,
+				37305AFED2D3BA0A2F1D5FED696DDCEF /* Private */,
+				B99946F7F7502CC1B717CAA6F88AD062 /* Utilities */,
+			);
+			name = TPJsBridgeCore;
+			path = TPJsBridgeCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,11 +341,14 @@
 			files = (
 				0EC2AC5CF7F91F32D73499A21E88737E /* NSBundle+TPJsBridge.h in Headers */,
 				13E7943C2627C45EB1C6520102FA2E89 /* NSString+TPJsBridge.h in Headers */,
+				EB2D83D464644F02D570C8A23D9C91A6 /* TPJsBridge.h in Headers */,
 				1D869042F09AAF4483088FDA1A4E309E /* TPJsBridgeCodeProvider.h in Headers */,
 				4326105E454C50A9064D4D9C85AD1BF3 /* TPJsBridgeConst.h in Headers */,
 				957E48C769BD07158264ABB806BEB7BB /* TPJsBridgeMacro.h in Headers */,
+				4C3DFA7B2B2F253E8DA015866EE87121 /* TPJsBridgePrivate.h in Headers */,
 				2F7341F17B9861D10484DE6DCBBADB35 /* TPJsCommandQueue.h in Headers */,
 				6FCC51186A3EF11B680F692367F98315 /* TPJsConfigParser.h in Headers */,
+				790C3ADD9860C480DDDC18863263EA28 /* TPJsConfiguration.h in Headers */,
 				3A4B2CB4AD0883407106A482840C0C26 /* TPJsInvokedUrlCommand.h in Headers */,
 				EBD6B5BB2AE9E474E81CCA3BE4C98F49 /* TPJsPlugin.h in Headers */,
 				B2CC31ED97CCC2714C44373935B58B92 /* TPJsPlugin_device.h in Headers */,
@@ -330,9 +357,6 @@
 				FC62500C2185CFAD29A7452F2C9BA3AE /* TPJsPluginResult.h in Headers */,
 				D7CAF7CCFB0ED4494672BF34449BA823 /* TPJsPluginResultEmitter.h in Headers */,
 				ABE4CFF8E80D8B70A2223E60D9F409D6 /* TPJsService.h in Headers */,
-				F095669B1F3425E4000DDA13 /* TPJsConfiguration.h in Headers */,
-				4C3DFA7B2B2F253E8DA015866EE87121 /* TPJsBridgePrivate.h in Headers */,
-				F01D61651F342BE200A13966 /* TPJsBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +429,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F095669A1F3425C5000DDA13 /* TPJsConfiguration.m in Sources */,
 				A240D621C534E2678B4C28314D49A0E0 /* NSBundle+TPJsBridge.m in Sources */,
 				4C351B1E3050DCABA526BB3A64CCA1F2 /* NSString+TPJsBridge.m in Sources */,
 				D860EE9563A6E85E2850A7F63B70C186 /* TPJsBridge-dummy.m in Sources */,
@@ -413,6 +436,7 @@
 				3B8FAFA87EC1397E83613675647E549B /* TPJsBridgeConst.m in Sources */,
 				8B4F23B5C555B121BA19CCDDB24A82BC /* TPJsCommandQueue.m in Sources */,
 				95C6F334CDFC3AA048A151C26BB230A2 /* TPJsConfigParser.m in Sources */,
+				F0F8F9B983460548AFCB071886F5C6BD /* TPJsConfiguration.m in Sources */,
 				249F5A23A25559A74AD133F348EE7A11 /* TPJsInvokedUrlCommand.m in Sources */,
 				30475C2D2CE3140D4C9971D931B2E6BA /* TPJsPlugin.m in Sources */,
 				6EB3E4C624BDB2C8D933E04E219DECC2 /* TPJsPlugin_device.m in Sources */,

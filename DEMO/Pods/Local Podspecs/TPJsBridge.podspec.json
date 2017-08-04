@@ -19,7 +19,7 @@
   },
   "source_files": "TPJsBridge/**/*.{h,m}",
   "public_header_files": "TPJsBridge/**/*.{h}",
-  "resources": "TPJsBridge/TPJsBridge.bundle",
+  "resources": "TPJsBridge/TPJsBridgeResource/TPJsBridge.bundle",
   "frameworks": "WebKit",
   "requires_arc": true
 }

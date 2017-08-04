@@ -1,1 +1,1 @@
-../../../../../TPJsBridge/TPJsBridgeCore/Components/TPJsBridgePrivate.h
+../../../../../TPJsBridge/TPJsBridgeCore/Private/TPJsBridgePrivate.h
