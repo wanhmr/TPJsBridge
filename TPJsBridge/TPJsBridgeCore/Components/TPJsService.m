@@ -120,6 +120,7 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
             return;
         }
         if ([bodyString isEqualToString:@"ready"]) {
+            _status = TPJsServiceStatusOpened;
             [self noticeReady];
         }else {
             NSURL *url = [NSURL URLWithString:bodyString];
