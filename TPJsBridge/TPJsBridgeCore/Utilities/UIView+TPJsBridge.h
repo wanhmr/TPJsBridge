@@ -8,5 +8,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (TPJsBridge)
-
+@property (nonatomic, readonly) UIViewController *tp_viewController;
 @end

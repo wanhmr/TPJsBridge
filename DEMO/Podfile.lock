@@ -1,16 +1,16 @@
 PODS:
-  - TPJsBridge (0.0.16)
+  - TPJsBridge (0.0.18)
 
 DEPENDENCIES:
   - TPJsBridge (from `../`)
 
 EXTERNAL SOURCES:
   TPJsBridge:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  TPJsBridge: 3d9b573cb2d7120acd47bed98422519ed5ac0bac
+  TPJsBridge: 24cfb10cc430bdb3636b3bf00026bd5139e722b2
 
 PODFILE CHECKSUM: ea711a39e6946d751b6947aad29923b8bf5089f7
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

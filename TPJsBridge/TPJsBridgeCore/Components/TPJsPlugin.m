@@ -10,6 +10,7 @@
 #import "TPJsService.h"
 #import "TPJsBridgeConst.h"
 #import "TPJsConfiguration.h"
+#import "UIView+TPJsBridge.h"
 
 @interface TPJsPlugin ()
 @property (nonatomic, weak) TPJsService *service;
@@ -89,6 +90,9 @@
     return self.service.isReady;
 }
 
+- (UIViewController *)viewController {
+    return self.service.webView.tp_viewController;
+}
 
 - (TPJsPluginResultEmitter *)pluginResultEmitter {
     return self.service.configuration.pluginResultEmitter;

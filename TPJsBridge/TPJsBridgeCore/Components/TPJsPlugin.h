@@ -13,6 +13,7 @@
 @interface TPJsPlugin : NSObject
 @property (nonatomic, readonly) TPJsPluginResultEmitter *pluginResultEmitter;
 @property (nonatomic, readonly) BOOL isReady;
+@property (nonatomic, readonly) UIViewController *viewController;
 
 - (void)didInitialize NS_REQUIRES_SUPER;
 
