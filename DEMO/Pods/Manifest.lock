@@ -1,5 +1,5 @@
 PODS:
-  - TPJsBridge (0.0.18)
+  - TPJsBridge (0.0.20)
 
 DEPENDENCIES:
   - TPJsBridge (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TPJsBridge: 24cfb10cc430bdb3636b3bf00026bd5139e722b2
+  TPJsBridge: b703d3c62a450acc905997bd059ac3c413664969
 
 PODFILE CHECKSUM: ea711a39e6946d751b6947aad29923b8bf5089f7
 

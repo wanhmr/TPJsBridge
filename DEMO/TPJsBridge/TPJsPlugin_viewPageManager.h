@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Tpphha. All rights reserved.
 //
 
-#import "TPJsPlugin.h"
+#import <TPJsBridge.h>
 #import <WebKit/WebKit.h>
 
 @interface UIApplication (TPJsBridgeTopViewController)

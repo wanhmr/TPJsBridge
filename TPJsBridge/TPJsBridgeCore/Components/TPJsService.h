@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) TPJsConfiguration *configuration;
 @property (nonatomic, readonly) TPJsServiceStatus status;
 @property (nonatomic, readonly) NSString *scheme;
-@property (nonatomic, readonly) BOOL isReady;
+@property (nonatomic, readonly) BOOL isReady; // status == TPJsServiceStatusOpened
 
 - (instancetype)initWithConfiguration:(nullable TPJsConfiguration *)configuration;
 

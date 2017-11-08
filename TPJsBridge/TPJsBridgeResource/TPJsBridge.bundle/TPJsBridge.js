@@ -1,34 +1,34 @@
 var ICallbackStatus;
 (function (ICallbackStatus) {
- ICallbackStatus[ICallbackStatus["NO_RESULT"] = 0] = "NO_RESULT";
- ICallbackStatus[ICallbackStatus["OK"] = 1] = "OK";
- ICallbackStatus[ICallbackStatus["CLASS_NOT_FOUND_EXCEPTION"] = 2] = "CLASS_NOT_FOUND_EXCEPTION";
- ICallbackStatus[ICallbackStatus["ILLEGAL_ACCESS_EXCEPTION"] = 3] = "ILLEGAL_ACCESS_EXCEPTION";
- ICallbackStatus[ICallbackStatus["INSTANTIATION_EXCEPTION"] = 4] = "INSTANTIATION_EXCEPTION";
- ICallbackStatus[ICallbackStatus["MALFORMED_URL_EXCEPTION"] = 5] = "MALFORMED_URL_EXCEPTION";
- ICallbackStatus[ICallbackStatus["IO_EXCEPTION"] = 6] = "IO_EXCEPTION";
- ICallbackStatus[ICallbackStatus["INVALID_ACTION"] = 7] = "INVALID_ACTION";
- ICallbackStatus[ICallbackStatus["JSON_EXCEPTION"] = 8] = "JSON_EXCEPTION";
- ICallbackStatus[ICallbackStatus["ERROR"] = 9] = "ERROR";
- })(ICallbackStatus || (ICallbackStatus = {}));
+    ICallbackStatus[ICallbackStatus["NO_RESULT"] = 0] = "NO_RESULT";
+    ICallbackStatus[ICallbackStatus["OK"] = 1] = "OK";
+    ICallbackStatus[ICallbackStatus["CLASS_NOT_FOUND_EXCEPTION"] = 2] = "CLASS_NOT_FOUND_EXCEPTION";
+    ICallbackStatus[ICallbackStatus["ILLEGAL_ACCESS_EXCEPTION"] = 3] = "ILLEGAL_ACCESS_EXCEPTION";
+    ICallbackStatus[ICallbackStatus["INSTANTIATION_EXCEPTION"] = 4] = "INSTANTIATION_EXCEPTION";
+    ICallbackStatus[ICallbackStatus["MALFORMED_URL_EXCEPTION"] = 5] = "MALFORMED_URL_EXCEPTION";
+    ICallbackStatus[ICallbackStatus["IO_EXCEPTION"] = 6] = "IO_EXCEPTION";
+    ICallbackStatus[ICallbackStatus["INVALID_ACTION"] = 7] = "INVALID_ACTION";
+    ICallbackStatus[ICallbackStatus["JSON_EXCEPTION"] = 8] = "JSON_EXCEPTION";
+    ICallbackStatus[ICallbackStatus["ERROR"] = 9] = "ERROR";
+})(ICallbackStatus || (ICallbackStatus = {}));
 var IJsBridgePlatform;
 (function (IJsBridgePlatform) {
- IJsBridgePlatform[IJsBridgePlatform["iOSPlatform"] = 1] = "iOSPlatform";
- IJsBridgePlatform[IJsBridgePlatform["androidPlatform"] = 2] = "androidPlatform";
- IJsBridgePlatform[IJsBridgePlatform["broswerPlatform"] = 4] = "broswerPlatform";
- IJsBridgePlatform[IJsBridgePlatform["clientPlatform"] = 3] = "clientPlatform";
- })(IJsBridgePlatform || (IJsBridgePlatform = {}));
+    IJsBridgePlatform[IJsBridgePlatform["iOSPlatform"] = 1] = "iOSPlatform";
+    IJsBridgePlatform[IJsBridgePlatform["androidPlatform"] = 2] = "androidPlatform";
+    IJsBridgePlatform[IJsBridgePlatform["broswerPlatform"] = 4] = "broswerPlatform";
+    IJsBridgePlatform[IJsBridgePlatform["clientPlatform"] = 3] = "clientPlatform";
+})(IJsBridgePlatform || (IJsBridgePlatform = {}));
 var JsBridgeMap = (function () {
-                   function JsBridgeMap() {
-                   }
-                   return JsBridgeMap;
-                   }());
+    function JsBridgeMap() {
+    }
+    return JsBridgeMap;
+}());
 function generateJsBridge(scheme) {
     "use strict";
     //app版本比较
     function compareVersion(v1, v2) {
         v1 = String(v1).split("."),
-        v2 = String(v2).split(".");
+            v2 = String(v2).split(".");
         try {
             for (var i = 0, max = Math.max(v1.length, v2.length); i < max; i++) {
                 var subV1 = isFinite(v1[i]) && Number(v1[i]) || 0, subV2 = isFinite(v2[i]) && Number(v2[i]) || 0;
@@ -49,9 +49,9 @@ function generateJsBridge(scheme) {
         var t = api.split(".");
         var n = window;
         t.forEach(function (e) {
-                  !n[e] && (n[e] = {});
-                  n = n[e];
-                  });
+            !n[e] && (n[e] = {});
+            n = n[e];
+        });
         return n;
     }
     //存储函数，返回index
@@ -66,7 +66,15 @@ function generateJsBridge(scheme) {
         if (classObj[suffix]) {
             console.error("JSBridge: ealready has " + path);
         }
-        handler.iOS && (jsBridge.platform & IJsBridgePlatform.iOSPlatform) ? currentPlatformHandler = handler.iOS : handler.android && (jsBridge.platform & IJsBridgePlatform.androidPlatform) ? currentPlatformHandler = handler.android : handler.browser && (currentPlatformHandler = handler.browser);
+        if (handler.iOS && (jsBridge.platform & IJsBridgePlatform.iOSPlatform)) {
+            currentPlatformHandler = handler.iOS;
+        }
+        else if (handler.android && (jsBridge.platform & IJsBridgePlatform.androidPlatform)) {
+            currentPlatformHandler = handler.android;
+        }
+        else {
+            currentPlatformHandler = handler.browser;
+        }
         //存储函数
         if (currentPlatformHandler) {
             classObj[suffix] = currentPlatformHandler;
@@ -104,8 +112,9 @@ function generateJsBridge(scheme) {
         var callback = callbacks[callbackId];
         if (!callback)
             return;
+        var executeCallback = function () { };
         if (typeof callback === "object") {
-            function executeCallback() {
+            executeCallback = function () {
                 if (callbackData.status === ICallbackStatus.OK) {
                     if (callback.success) {
                         callback.success.call(null, callbackData.message);
@@ -116,11 +125,11 @@ function generateJsBridge(scheme) {
                         callback.fail.call(null, callbackData.message);
                     }
                 }
-            }
+            };
             if (async) {
                 setTimeout(function () {
-                           executeCallback();
-                           }, 0);
+                    executeCallback();
+                }, 0);
             }
             else {
                 executeCallback();
@@ -129,8 +138,8 @@ function generateJsBridge(scheme) {
         else if (typeof callback === "function") {
             if (async) {
                 setTimeout(function () {
-                           callback.call(null, callbackData.message);
-                           }, 0);
+                    callback.call(null, callbackData.message);
+                }, 0);
             }
             else {
                 callback.call(null, callbackData.message);
@@ -240,34 +249,34 @@ function generateJsBridge(scheme) {
         platform = IJsBridgePlatform.broswerPlatform;
     }
     var JsBridge = (function () {
-                    function JsBridge() {
-                    this.debug = true;
-                    this.platform = platform;
-                    this.version = "1";
-                    this.appVersion = "1";
-                    this.build = build;
-                    this.invoke = invoke;
-                    this.execReady = execReady;
-                    this.ready = ready;
-                    this.execGlobalCallback = execGlobalCallback;
-                    this.execPatchEvent = execPatchEvent;
-                    }
-                    JsBridge.prototype.compareAppVersion = function (ver) {
-                    return compareVersion(this.appVersion, ver);
-                    };
-                    return JsBridge;
-                    }());
+        function JsBridge() {
+            this.debug = true;
+            this.platform = platform;
+            this.version = "1";
+            this.appVersion = "1";
+            this.build = build;
+            this.invoke = invoke;
+            this.execReady = execReady;
+            this.ready = ready;
+            this.execGlobalCallback = execGlobalCallback;
+            this.execPatchEvent = execPatchEvent;
+        }
+        JsBridge.prototype.compareAppVersion = function (ver) {
+            return compareVersion(this.appVersion, ver);
+        };
+        return JsBridge;
+    }());
     var jsBridge = new JsBridge();
     return jsBridge;
 }
 var JsBridgeInfo = (function () {
-                    function JsBridgeInfo() {
-                    this.scheme = "#scheme#";
-                    }
-                    return JsBridgeInfo;
-                    }());
+    function JsBridgeInfo() {
+        this.scheme = "#scheme#";
+    }
+    return JsBridgeInfo;
+}());
 var jsBridgeInfo = new JsBridgeInfo();
 (function (scheme, jsBridge) {
- this[scheme] = jsBridge(scheme),
- typeof define === "function" ? define(this[scheme]) : typeof module === "object" && (module.exports = this[scheme]);
- })(jsBridgeInfo.scheme, generateJsBridge);
+    this[scheme] = jsBridge(scheme),
+        typeof define === "function" ? define(this[scheme]) : typeof module === "object" && (module.exports = this[scheme]);
+})(jsBridgeInfo.scheme, generateJsBridge);

@@ -16,10 +16,12 @@
 #import "TPJsBridgePrivate.h"
 
 static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
+static NSString* const kTPJsBridgeReadyName = @"ready";
 
 @interface TPJsService () <WKScriptMessageHandler>
 @property (nonatomic, strong) TPJsCommandQueue *commandQueue;
 @property (nonatomic, strong) TPJsConfiguration *configuration;
+@property (nonatomic, assign) TPJsServiceStatus status;
 @end
 
 @implementation TPJsService
@@ -60,7 +62,7 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
         [self close];
     }
     
-    _status = TPJsServiceStatusConnecting;
+    self.status = TPJsServiceStatusConnecting;
     
     self.webView = webView;
     
@@ -73,7 +75,7 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
     WKWebView *webView = self.webView;
     if (!webView || _status == TPJsServiceStatusClosed) return;
     
-    _status = TPJsServiceStatusClosed;
+    self.status = TPJsServiceStatusClosed;
     
     [self removeScriptMessageHandler];
     self.webView = nil;
@@ -119,8 +121,8 @@ static NSString* const kTPJsBridgeScriptMessageHandlerName = @"TPJsBridge";
         if (bodyString.length == 0) {
             return;
         }
-        if ([bodyString isEqualToString:@"ready"]) {
-            _status = TPJsServiceStatusOpened;
+        if ([bodyString isEqualToString:kTPJsBridgeReadyName]) {
+            self.status = TPJsServiceStatusOpened;
             [self noticeReady];
         }else {
             NSURL *url = [NSURL URLWithString:bodyString];
