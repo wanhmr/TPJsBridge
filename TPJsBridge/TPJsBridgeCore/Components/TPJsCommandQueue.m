@@ -46,10 +46,10 @@
         
         SEL selector = NSSelectorFromString([realMethodName stringByAppendingString:@":"]);
         if (selector && [plugin respondsToSelector:selector]) {
+            // 目前都是放到主线程操作，如果有大量耗时操作，这里其实是有问题的。
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 ((void (*)(id, SEL, id))objc_msgSend)(plugin, selector, command);
             }];
-            [[NSOperationQueue mainQueue] waitUntilAllOperationsAreFinished];
             
         }else {
             TPJsBridgeLog(@"%@ is not suport for %@", command.pluginProvideMethod, command.pluginName);
