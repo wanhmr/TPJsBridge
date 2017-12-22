@@ -117,12 +117,12 @@ function generateJsBridge(scheme) {
             executeCallback = function () {
                 if (callbackData.status === ICallbackStatus.OK) {
                     if (callback.success) {
-                        callback.success.call(null, callbackData.message);
+                        callback.success(callbackData.message);
                     }
                 }
                 else {
                     if (callback.fail) {
-                        callback.fail.call(null, callbackData.message);
+                        callback.fail(callbackData.message);
                     }
                 }
             };
