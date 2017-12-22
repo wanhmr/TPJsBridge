@@ -110,11 +110,12 @@ function generateJsBridge(scheme) {
     function fireCallback(callbackId, callbackData, async) {
         //获取回调对象
         var callback = callbacks[callbackId];
-        if (!callback)
-            return;
+        if (!callback) return;
+            
         var executeCallback = function () { };
         if (typeof callback === "object") {
-            executeCallback = function () {
+            executeCallback = function ()
+            {
                 if (callbackData.status === ICallbackStatus.OK) {
                     if (callback.success) {
                         callback.success(callbackData.message);
@@ -138,11 +139,11 @@ function generateJsBridge(scheme) {
         else if (typeof callback === "function") {
             if (async) {
                 setTimeout(function () {
-                    callback.call(null, callbackData.message);
+                    callback(callbackData.message);
                 }, 0);
             }
             else {
-                callback.call(null, callbackData.message);
+                callback(callbackData.message);
             }
         }
         else {
